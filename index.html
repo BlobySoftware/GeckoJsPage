@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GeckoJS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./icon/icons.css">
+    <link rel="stylesheet" href="./materialize/css/materialize.min.css">
+</head>
+<body>
+    <header>
+        <a href="#menu" id="menuBtn">
+            <i class="material-icons">menu</i>
+        </a>
+        <a href="#menu" id="searchBtn">
+                <i class="material-icons">search</i>
+        </a>
+        <div id="banner">
+            <div id="gLetter"></div>
+            <div id="middlePart"></div>
+            <div id="jsIcon"></div>
+        </div>
+    </header>
+    <main>
+         <div class="row">
+            <div class="col s12"><h1>All the JS tools you need in your project</h1></div>
+            <div class="col s12 sd"><p>JS Library, with the most usually tools in your project, like  <i>String</i> to <i>Int</i> convertions, array operations, async functions, promises, callbacks, ES6 implementation, <i>HTTP request</i>, <i>AJAX</i>, data convertions, data parsers, <i>JSON</i>, responsive design, dom manipulation, etc.</p></div>
+        </div>
+        <section id="code">
+            <a href="#copy" class="btn blue waves-effect" id="copyBtn">Copy</a>
+            <strong>$</strong><input type="text" id="npmCode" readonly value="npm i geckojs">
+            </section>
+            <a download href="./GeckoJS/gecko.js" class="btn blue waves-effect" id="download" ><i class="material-icons">arrow_downward</i> Download Gecko.JS</a>
+        <div class="note">
+                <h3>Please never use</h3>
+                <h1>jQuery</h1>
+        </div>
+    </main>
+    <section id="killD">
+        <h1>Help us to <strong>Kill</strong> the dollar ($)</h1>
+    </section>
+    <section id="trump">
+        <h3>Our octocat repository:</h3>
+        <img src="./img/Octocat.png" alt="">
+        <div id="shadow"></div>
+        <h1>Make libraries fasted again</h1>
+    </section>
+    <footer>
+        <strong>GeckoJS© all rights reserved <br> John Resig dont like this</strong>
+    </footer>
+</body>
+<script src="./materialize/js/materialize.min.js"></script>
+<script src="../GeckoJS/gecko.js"></script>
+<script>
+g("#copyBtn").event("click", () =>{
+    g("#npmCode").select();
+    document.execCommand("copy");
+})
+g("#trump").event("click", () =>{
+    window.open("https://github.com/alexsan134/GeckoJS");
+})
+
+g("#searchBtn > i").event("outClick", () =>{
+    if(bom.innerWidth > 500){
+        var scale = "scale(1, 1)";
+        if(bom.innerWidth > 700){
+            scale = "scale(1.6, 1.6)";
+        }
+        g("#banner").animates(`left:50%;transform:translateX(-50%) ${scale}`, 500);
+        g("#banner > div", 1).animates("width:148px", 500);
+    }
+})
+g("#searchBtn > i").event("click", () =>{
+    if(bom.innerWidth > 500){
+        var scale = "scale(1, 1)";
+        var space = 70;
+        if(bom.innerWidth > 700){
+            scale = "scale(1.6, 1.6)";
+            space = 140;
+        }
+        g("#banner").animates(`left:${space}px;transform:translateX(0%) ${scale}`, 500);
+        g("#banner > div", 1).animates("width:0px", 500);
+    }
+})
+</script>
