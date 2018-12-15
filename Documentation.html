@@ -1,13 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Oficial Documentation</title>
-    <script src="../GeckoJS/"></script>
+        <title>Oficial Documentation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/doc.css">
+        <link rel="stylesheet" href="./icon/icons.css">
+        <link rel="stylesheet" href="./materialize/css/materialize.min.css">
+        <link rel="stylesheet"
+      href="./css/solarized-dark.css">
 </head>
 <body>
-    
+        <header>
+                <a href="#menu" id="menuBtn">
+                    <i class="material-icons">menu</i>
+                </a>
+                <a href="#menu" id="searchBtn">
+                    <i class="material-icons">search</i>
+                </a>
+                <div id="searchBox">
+                    <input type="search" name="srBox" id="srBox" placeholder="Try to search">
+                </div>
+                <div id="banner">
+                    <div id="gLetter"></div>
+                    <div id="middlePart"></div>
+                    <div id="jsIcon"></div>
+                </div>
+            </header>
+            <main>
+                <p class="info">
+                        JS Library, with the most usually tools in your project, like String to Int convertions, array operations, async functions, promises, callbacks, ES6 implementation, HTTP request, AJAX, data convertions, data parsers, JSON, responsive design, dom manipulation, etc.
+                </p>
+                <h1 class="notes">
+                        We have 1ms per loop vs 5ms per loop for jQuery
+                </h1>
+                <h1 class="titles">
+                        Installation (Basic and Compressed)
+                </h1>
+                <textarea name="term" class="term" readonly="true">$ npm install geckojs</textarea>
+                <hr>
+                <h1 class="heads">Selectors</h1>
+                <h2 class="subHeads">Basic form: <p>You can select one element, or list of choised elements.</p></h2>
+                <pre><code class="js desc">g("cssSelector":String, Number/Array);
+g(["cssSelectors"]:String Array, Number/Array);</code></pre>
+                <pre><code class="js">g("#elmnt").event("click", () =>{
+//Do something ...
+
+})
+
+g(["#elmnt1", "#elmnt2", "#elmnt3"]).event("click", () =>{
+//Do something (three elements selected)
+
+})</code></pre>
+                <h2 class="subHeads">Select one: <p>You can select an specific element of a list.</p></h2>
+                <pre><code class="js">var number = 2;
+g(".list", number).event("click", () =>{
+//Do something (3th element)
+                          
+})</code></pre>
+<h2 class="subHeads">Limiters: <p>You can select an specific range of elements in a list from 0 to 'limiter'.</p></h2>
+                <pre><code class="js">var limiter = 7;
+g(".list", limiter).event("click", () =>{
+//Do something (from first element to 8th element)
+                          
+})</code></pre>
+<h2 class="subHeads">Ranges: <p>You can select a range of elements in a list with [Max, Min] or [Min, Max] it doesn't matter, and try to use negative coeficients like [3][-1].</p></h2>
+                <pre><code class="js">var min = 3, max = 8;
+g(".list", [max, min]).event("click", () =>{
+//Do something (from 4th element to 9th element)
+                          
+})</code></pre>
+<hr>
+<h1 class="heads">Events</h1>
+<h2 class="subHeads">All events: <p>Basically all events in addEventListener method, see <a href="https://developer.mozilla.org/es/docs/Web/Events">Events docs MDN</a> for more information.</p></h2>
+<pre><code class="js desc">g("cssSelector").event("event":String);</code></pre>
+<pre><code class="js">g("#elmnt").event("yourEvent", () =>{
+//Do something ...
+                                  
+})</code></pre>
+<h2 class="subHeads">outClick: <p>check if you click outside of an element, you can use by typing:</p> 
+    <ul>
+        <li>outClick</li>
+        <li>outclick</li>
+        <li>oClick</li>
+        <li>oclick</li>
+    </ul>
+</h2>
+<pre><code class="js">g("#elmnt").event("oClick", () =>{
+//Do something ...
+                                          
+})</code></pre>
+<hr>
+<h1 class="heads">Hover</h1>
+<h2 class="subHeads">Basic form: <p>Do something when mouse over and mouse out in two functions, the basic structure is:</p></h2>
+<pre><code class="js desc">g("cssSelector").hover(Function, Function);</code></pre>
+<pre><code class="js">g("#elmnt").hover(() =>{
+//Mouseover function ...
+
+},
+() =>{
+//Mouseout function ...
+
+});</code></pre>
+<hr>
+<h1 class="heads">Css</h1>
+<h2 class="subHeads">All rules: <p>Basically all css3 rules and browser support, see <a href="https://www.w3schools.com/csSref/">W3schools css</a> for more information, the basic structure is:</p></h2>
+<pre><code class="js desc">g("cssSelector").css("cssRules":String);
+g("cssSelector").css("get":String, "cssRule":String);</code></pre>
+<pre><code class="js">g("#elmnt").css("font-size:2em");</code></pre>
+<h2 class="subHeads">Empty: <p>When you call css method with empty params the function return all css rules by your element.</p></h2>
+<pre><code class="js">g("#elmnt").css(); //Return all css rules on #elmn</code></pre>
+<h2 class="subHeads">Get: <p>Returns value of an specific property in an element.</p></h2>
+<pre><code class="js">g("#elmnt").css("get", "font-size"); //Return 2em (example)</code></pre>
+<hr>
+<h1 class="heads">Animates</h1>
+<h2 class="subHeads">Css animation<p>Animates css of an element with css native not objects($), the dafualt time value is <span>150ms</span>, the basic structure is:</p></h2>
+<pre><code class="js desc">g("cssSelector").animates("cssRules":String, Number, Number);</code></pre>
+<pre><code class="js">g("#elmnt").animates("color:red");</code></pre>
+<h2 class="subHeads">Time: <p>Defines the duration of the animation in an element.</p></h2>
+<pre><code class="js">g("#elmnt").animates("color:red", 500); //Animates color:red in 500ms</code></pre>
+<h2 class="subHeads">Delay: <p>Defines the delay time when animation start in an element.</p></h2>
+<pre><code class="js">g("#elmnt").animates("color:red", 500, 1000); //Animates color:red in 500ms and starts in 1000ms</code></pre>
+<hr>
+<h1 class="heads">Attr</h1>
+<h2 class="subHeads">All attributes: <p>Basically all attributes of an element on html,its similar to css method and the basic structure is:</p></h2>
+<pre><code class="js desc">g("cssSelector").attr("attribute":String, "value":String);
+g("cssSelector").attr("method":String, "value":String);
+</code></pre>
+<pre><code class="js">g("#elmnt").attr("name", "newInput");</code></pre>
+<h2 class="subHeads">Get: <p>Returns value of an specific attribute of an element.</p></h2>
+<pre><code class="js">g("#elmnt").attr("name"); //Returns newInput (example)
+g("#elmnt").attr("get", "name"); //Returns newInput (example)
+</code></pre>
+<h2 class="subHeads">Has: <p>Returns boolean if your element has an specific attribute.</p></h2>
+<pre><code class="js">g("#elmnt").attr("has", "name"); //Return true (example)</code></pre>
+<h2 class="subHeads">Remove: <p>Removes an attribute of your element.</p></h2>
+<pre><code class="js">g("#elmnt").attr("remove", "name");
+g("#elmnt").attr("has", "name"); //Return false
+</code></pre>
+<hr>
+<h1 class="heads">Class</h1>
+<h2 class="subHeads">Class methods: <p>You can set, remove, replace, toggle, an if contains class of an element, the basic structure is:</p></h2>
+<pre><code class="js desc">g("cssSelector").class("addclassName":String);
+g("cssSelector").class("method":String, "className":String);
+g("cssSelector").class("replace":String, "className":String, "newclassName":String);
+</code></pre>
+<pre><code class="js">g("#elmnt").class("newEl");</code></pre>
+<h2 class="subHeads">Get: <p>Returns value of an specific class of an element.</p></h2>
+<pre><code class="js">g("#elmnt").class(); //Returns all classes of your element</code></pre>
+<h2 class="subHeads">Remove: <p>Removes an specific class of your element.</p></h2>
+<pre><code class="js">g("#elmnt").class("remove", "newEl");</code></pre>
+<h2 class="subHeads">Replace: <p>Replace an specific class of your element.</p></h2>
+<pre><code class="js">g("#elmnt").class("replace", "newEl", "newElClass");</code></pre>
+<h2 class="subHeads">Toggle: <p>Removes or add a class of your element.</p></h2>
+<pre><code class="js">g("#elmnt").class("toggle","newElClass");</code></pre>
+<h2 class="subHeads">Contains: <p>Returns boolean if your element contain a class</p></h2>
+<pre><code class="js">g("#elmnt").class("contains", "newElClass"); //Returns true</code></pre>
+<hr>
+<h1 class="heads">Html</h1>
+<h2 class="subHeads">Set innerHTML:<p>Append html text to your element, similar to innerHTML method, the basic structure is:</p></h2>
+<pre><code class="js desc">g("cssSelector").html("htmlText":String);</code></pre>
+<pre><code class="js">g("#elmnt").html("<i>Some text</i>");</code></pre>
+<h2 class="subHeads">Get: <p>Retturns html text inside of an element</p></h2>
+<pre><code class="js">g("#elmnt").html(); //Returns "&#60;i&#62;Some text&#60;/i&#62;"</code></pre>
+<hr>
+<hr>
+<h1 class="heads">Text</h1>
+<h2 class="subHeads">Set text:<p>Set text value to your element, similar to textContent method, the basic structure is:</p></h2>
+<pre><code class="js desc">g("cssSelector").text("someText":String);</code></pre>
+<pre><code class="js">g("#elmnt").text("Some text");</code></pre>
+<h2 class="subHeads">Get: <p>Retturns string of text inside of an element</p></h2>
+<pre><code class="js">g("#elmnt").text(); //Returns "Some text"</code></pre>
+<hr>
+       
+</main>
+            <footer>
+                    <strong>GeckoJS© all rights reserved <br> John Resig dont like this</strong>
+                </footer>
 </body>
+<script src="./materialize/js/materialize.min.js"></script>
+<script src="../GeckoJS/gecko.js"></script>
+<script src="./js/highlight.pack.js"></script>
+
+<script>
+
+g(["#searchBtn > i","#searchBox", "#searchBox > input"]).event("outClick", () =>{
+    if(bom.innerWidth < 500){
+        g("#searchBox").animates("opacity:0", 500);
+        g("header").animates("margin-bottom:0px", 300);
+    }else if(bom.innerWidth > 500  && bom.innerWidth < 700){
+        g("#searchBox").animates("opacity:0", 500);
+        g("#banner").animates("left:50%;transform:translateX(-50%)", 500, 500);
+        g("#banner > div", 1).animates("width:148px", 500, 500);
+    }else if(bom.innerWidth >= 700){
+        g("#banner > div", 1).animates("width:148px", 500, 600);
+        g("#banner").animates("left:50%;translateX(-50%) scale(1.6, 1.6)", 500, 600);
+        g("#searchBox").animates("opacity:0", 500);
+    }
+})
+g(["#searchBtn > i","#searchBox", "#searchBox > input"]).event("click", () =>{
+    g("#searchBox > input").focus();
+    if(bom.innerWidth < 500){
+        g("#searchBox").animates("opacity:1", 500, 300);
+        g("header").animates("margin-bottom:75px");
+    }else if(bom.innerWidth > 500 && bom.innerWidth < 700){
+        g("#banner").animates("left:70px;transform:translateX(0%)", 500, 500);
+        g("#banner > div", 1).animates("width:0", 500);
+        g("#searchBox").animates("opacity:1", 500, 500);
+    }else if(bom.innerWidth >= 700){
+        g("#banner > div", 1).animates("width:0", 500);
+        g("#banner").animates("left:275px;translateX(0%) scale(1.6, 1.6)", 500, 500);
+        g("#searchBox").animates("opacity:1", 500);
+    }
+})
+hljs.initHighlightingOnLoad();
+</script>
 </html>

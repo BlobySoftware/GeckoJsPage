@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./icon/icons.css">
     <link rel="stylesheet" href="./materialize/css/materialize.min.css">
 </head>
@@ -15,8 +15,11 @@
             <i class="material-icons">menu</i>
         </a>
         <a href="#menu" id="searchBtn">
-                <i class="material-icons">search</i>
+            <i class="material-icons">search</i>
         </a>
+        <div id="searchBox">
+            <input type="search" name="srBox" id="srBox" placeholder="Try to search">
+        </div>
         <div id="banner">
             <div id="gLetter"></div>
             <div id="middlePart"></div>
@@ -47,12 +50,13 @@
         <div id="shadow"></div>
         <h1>Make libraries fasted again</h1>
     </section>
+    <div id="ofe"></div>
     <footer>
         <strong>GeckoJS© all rights reserved <br> John Resig dont like this</strong>
     </footer>
 </body>
 <script src="./materialize/js/materialize.min.js"></script>
-<script src="https://alexsan134.github.io/GeckoJS/gecko.js"></script>
+<script src="../GeckoJS/gecko.js"></script>
 <script>
 g("#copyBtn").event("click", () =>{
     g("#npmCode").select();
@@ -62,26 +66,34 @@ g("#trump").event("click", () =>{
     window.open("https://github.com/alexsan134/GeckoJS");
 })
 
-g("#searchBtn > i").event("outClick", () =>{
-    if(bom.innerWidth > 500){
-        var scale = "scale(1, 1)";
-        if(bom.innerWidth > 700){
-            scale = "scale(1.6, 1.6)";
-        }
-        g("#banner").animates(`left:50%;transform:translateX(-50%) ${scale}`, 500);
-        g("#banner > div", 1).animates("width:148px", 500);
+g(["#searchBtn > i","#searchBox", "#searchBox > input"]).event("outClick", () =>{
+    if(bom.innerWidth < 500){
+        g("#searchBox").animates("opacity:0", 500);
+        g("header").animates("margin-bottom:0px", 300);
+    }else if(bom.innerWidth > 500  && bom.innerWidth < 700){
+        g("#searchBox").animates("opacity:0", 500);
+        g("#banner").animates("left:50%;transform:translateX(-50%)", 500, 500);
+        g("#banner > div", 1).animates("width:148px", 500, 500);
+    }else if(bom.innerWidth >= 700){
+        g("#banner > div", 1).animates("width:148px", 500, 600);
+        g("#banner").animates("left:50%;translateX(-50%) scale(1.6, 1.6)", 500, 600);
+        g("#searchBox").animates("opacity:0", 500);
     }
 })
-g("#searchBtn > i").event("click", () =>{
-    if(bom.innerWidth > 500){
-        var scale = "scale(1, 1)";
-        var space = 70;
-        if(bom.innerWidth > 700){
-            scale = "scale(1.6, 1.6)";
-            space = 140;
-        }
-        g("#banner").animates(`left:${space}px;transform:translateX(0%) ${scale}`, 500);
-        g("#banner > div", 1).animates("width:0px", 500);
+g(["#searchBtn > i","#searchBox", "#searchBox > input"]).event("click", () =>{
+    g("#searchBox > input").focus();
+    if(bom.innerWidth < 500){
+        g("#searchBox").animates("opacity:1", 500, 300);
+        g("header").animates("margin-bottom:75px");
+    }else if(bom.innerWidth > 500 && bom.innerWidth < 700){
+        g("#banner").animates("left:70px;transform:translateX(0%)", 500, 500);
+        g("#banner > div", 1).animates("width:0", 500);
+        g("#searchBox").animates("opacity:1", 500, 500);
+    }else if(bom.innerWidth >= 700){
+        g("#banner > div", 1).animates("width:0", 500);
+        g("#banner").animates("left:275px;translateX(0%) scale(1.6, 1.6)", 500, 500);
+        g("#searchBox").animates("opacity:1", 500);
     }
 })
 </script>
+</html>

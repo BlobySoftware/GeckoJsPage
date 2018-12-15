@@ -1,0 +1,320 @@
+@font-face {
+    font-family:"Avenir";
+    src: url("../fonts/avenir.otf");
+  }
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.otf");
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Poppins";
+}
+$primary:#2196F3;
+header {
+    max-width:1300px;
+    position: relative;
+    margin: 0px auto;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 20px;
+    padding-bottom: 30px;
+    z-index:10;
+    #menuBtn{
+        position:absolute;
+        left:20px;
+        top:37%;
+        transform:translateY(-50%);
+        i{
+            position: relative;
+            top:2px;
+            color:#000;
+            font-size:50px;
+        }
+    }
+    #searchBtn{
+        background:#fff;
+        position:absolute;
+        right:20px;
+        color:#000;
+        top:37%;
+        transform:translateY(-50%);
+        i{
+          background:#fff;
+            position: relative;
+            top:2px;
+            font-size:50px;
+        }
+    }
+    #searchBox{
+      z-index:2;
+      background:#fff;
+      position: absolute;
+      opacity:0;
+      left:0;
+      font-size:20px;
+      width:100%;
+      padding:0 20px;
+      margin:80px 0 0 0;
+      height:80px;
+      input{
+        text-align:center;
+        font-weight:bold;
+        height:80px;
+        box-sizing: border-box;
+        width:100%;
+        margin:0;
+        font-size:2em;
+        border-bottom:3px solid #777;
+        padding:20px;
+        color:#555;
+      }
+      input::placeholder{
+        color:#222!important;
+      }
+      input:focus{
+        border-bottom:3px solid #777;
+      }
+    }
+    #banner {
+      position: relative;  
+      left:50%;
+      transform:translateX(-50%);
+      display:flex;
+      height:80px;
+      width:135px;//283px;
+      z-index:10;
+      div:nth-child(1){
+        width:45px;
+        background:url("../img/logo.png") 0px 0;
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+      div:nth-child(2){
+        width:0;//148px
+        background:url("../img/logo.png") -45px 0;
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+      div:nth-child(3){
+        width:90px;
+        background:url("../img/logo.png") -195px 0;
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+    }
+  }
+  main {
+    max-width:1300px;
+    border-top: 3px solid #777;
+    position: relative;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 40px 20px;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+    font-size:20px;
+    font-family:"Avenir";
+    .info{
+        font-size:0.8em;
+    }
+    .notes{
+        font-weight:bold;
+        font-size:1.1em;
+        margin:0;
+        margin:10px 0 00px 0;
+    }
+    .titles{
+        text-align:center;
+        font-size:1.25em;
+        font-weight:bold;
+        color:$primary;
+        margin:30px 0 20px 0;
+    }
+    .term{
+        text-align:center;
+        // margin:2.8rem 0 1.68rem 0;
+        appearance: none;
+        border:none;
+        outline:none;
+        background:#555;
+        resize:none;
+        width:100%;
+        height:85px;
+        padding:30px;
+        box-sizing: border-box;
+        color:#fff;
+        font-family: "Poppins";
+    }
+    hr{
+        margin:30px 0;
+    }
+    .heads{
+        font-family: "Avenir";
+        padding-bottom:3px;
+        border-bottom:5px solid $primary;
+        font-weight:900;
+        margin:0;
+    }
+    .subHeads{
+        font-family: "Poppins";
+        font-weight:lighter;
+        color:#555;
+        font-size: 2em;
+        margin:15px 0 0 0;
+        p{
+            font-size:0.5em;
+            line-height:20px;
+        }
+        span{
+          color:#333;
+          font-weight:bold;
+        }
+        ul{
+            margin:20px 0 0 35px;
+            list-style:circle;
+            font-size:20px;
+            li{
+                color:rgba($primary, $alpha: 0.8);
+                list-style:disc;
+                line-height:30px;
+                padding:0;
+                margin:0;
+            }
+        }
+    }
+    pre{
+        margin-top:20px;
+    }
+  code{
+    padding:20px!important;
+    font-family: "Avenir"!important;
+    font-weight:lighter;
+    font-size:0.9em;
+   }
+   .desc{
+     font-style:oblique;
+     filter: hue-rotate(30deg);
+     background:#333;
+   }
+}
+  footer {
+    max-width:1300px;
+    background: #444;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 330px) {
+    header #menuBtn i{
+      font-size:70px;
+    }
+    header #searchBtn i{
+      font-size:70px;
+    }
+  }
+ 
+  @media screen and (min-width: 500px) {
+
+    header #banner{
+      width:283px;
+      div:nth-child(2){
+        width:148px;
+      }
+    }
+    #searchBtn{
+      background:#fff;
+      position:absolute;
+      right:20px;
+      color:#000;
+      top:37%;
+      transform:translateY(-50%);
+      i{
+        background:#fff;
+          position: relative;
+          top:2px;
+          font-size:50px;
+      }
+  }
+  header #searchBox{
+    background:transparent;
+    margin:0;
+    width:400px;
+    left:unset;
+    right:50px;
+    font-size:1.1em;
+    z-index:1;
+    input{
+      text-align:right;
+    }
+  }
+  }
+  @media screen and (min-width: 700px) {
+
+    header #searchBox{
+      width:560px;
+      font-size:1.5em;
+      z-index:1;
+      margin-top:65px;
+      height:100px;
+      input{
+        padding-bottom:60px;
+      }
+    }
+    header {
+      width: 92%;
+      margin-bottom: 0px;
+      height:200px;
+      #banner{
+        top:25%;
+        transform:translateX(-50%) scale(1.6, 1.6);
+      }
+    }
+    header #menuBtn{
+      left:0;
+      top:43%;
+    }
+    header #menuBtn i{
+      position: relative;
+      top:02px;
+    }
+    header #searchBtn{
+      right:0;
+      top:43%;
+    }
+    header #searchBtn i{
+      position: relative;
+      top:02px;
+    }
+    main .titles{
+        text-align:left;
+    } 
+  }
+
+
+  
+  @media screen and (min-width: 1024px) {
+    header {
+      width: 85%;
+    }
+    footer {
+      font-size: 1.2em;
+      width: 85%;
+      padding: 50px;
+    }
+    main{
+        width: 85%;
+padding: 50px;
+.info{
+    font-size:1em;
+}
+.subHeads p{
+        font-size:0.55em;
+}
+    }
+  }
