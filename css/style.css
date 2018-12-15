@@ -15,8 +15,12 @@
   font-family: "Poppins";
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 header {
-  max-width: 1300px;
+  max-width: 1600px;
   position: relative;
   margin: 0px auto;
   width: 100%;
@@ -122,7 +126,7 @@ header #banner div:nth-child(3) {
 }
 
 main {
-  max-width: 1300px;
+  max-width: 1600px;
   border-top: 3px solid #777;
   position: relative;
   background: rgba(0, 0, 0, 0.04);
@@ -132,6 +136,105 @@ main {
   margin: 0 auto;
   z-index: 2;
   padding-bottom: 0;
+}
+
+main .info {
+  font-size: 0.8em;
+}
+
+main .notes {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 0;
+  margin: 10px 0 00px 0;
+}
+
+main .titles {
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #2196F3;
+  margin: 30px 0 20px 0;
+}
+
+main .term {
+  text-align: center;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: #555;
+  resize: none;
+  width: 100%;
+  height: 85px;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Poppins";
+}
+
+main hr {
+  margin: 30px 0;
+}
+
+main .heads {
+  font-family: "Avenir";
+  padding-bottom: 3px;
+  border-bottom: 5px solid #2196F3;
+  font-weight: 900;
+  margin: 0;
+}
+
+main .ft {
+  margin-top: 50px;
+}
+
+main .subHeads {
+  font-family: "Poppins";
+  font-weight: lighter;
+  color: #555;
+  font-size: 2em;
+  margin: 15px 0 0 0;
+}
+
+main .subHeads p {
+  font-size: 0.5em;
+  line-height: 20px;
+}
+
+main .subHeads span {
+  color: #333;
+  font-weight: bold;
+}
+
+main .subHeads ul {
+  margin: 20px 0 0 35px;
+  list-style: circle;
+  font-size: 20px;
+}
+
+main .subHeads ul li {
+  color: rgba(33, 150, 243, 0.8);
+  list-style: disc;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+main pre {
+  margin-top: 20px;
+}
+
+main code {
+  padding: 20px !important;
+  font-family: "Avenir" !important;
+  font-weight: lighter;
+  font-size: 0.9em;
+}
+
+main .desc {
+  font-style: oblique;
+  filter: hue-rotate(30deg);
+  background: #333;
 }
 
 main #download {
@@ -235,6 +338,7 @@ main .row p i {
 }
 
 #killD {
+  max-width: 1600px;
   position: relative;
   background: rgba(33, 150, 243, 0.5);
   padding: 40px 20px;
@@ -255,6 +359,7 @@ main .row p i {
 }
 
 #trump {
+  max-width: 1600px;
   position: relative;
   background: url("../img/dolla.png");
   background-size: cover;
@@ -304,7 +409,7 @@ main .row p i {
 }
 
 footer {
-  max-width: 1300px;
+  max-width: 1600px;
   background: #444;
   color: #fff;
   padding: 20px;
@@ -399,6 +504,15 @@ footer {
   header #searchBox input {
     padding-bottom: 60px;
   }
+  main .subHeads {
+    font-size: 2.5em;
+  }
+  main .subHeads p {
+    font-size: 0.6em;
+  }
+  main code {
+    font-size: 1.2em;
+  }
   #trump {
     padding: 20px;
     display: flex;
@@ -469,9 +583,8 @@ footer {
   main #download {
     position: absolute;
     left: 18px;
-    bottom: -16%;
-    width: auto;
-    padding: 0 30px !important;
+    width: 290px;
+    margin-top: 80px;
   }
   #killD h1 {
     text-align: left;
@@ -492,6 +605,9 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+  main #download {
+    left: 50px;
+  }
   #trump {
     width: 85%;
     padding: 50px;
@@ -516,14 +632,6 @@ footer {
   }
   #code input {
     width: 150px;
-  }
-  main #download {
-    position: absolute;
-    left: 0%;
-    margin-left: 44px;
-    bottom: -13%;
-    width: auto;
-    padding: 0 30px !important;
   }
 }
 
