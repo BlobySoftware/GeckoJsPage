@@ -60,6 +60,41 @@ header #searchBtn i {
   font-size: 50px;
 }
 
+header #results {
+  display: none;
+  opacity: 0;
+  font-size: 20px;
+  position: absolute;
+  top: 160px;
+  left: 0px;
+  padding: 20px;
+  width: 100%;
+  z-index: 20;
+  outline: 2px solid #000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+
+header #results h1 {
+  font-size: 1.3em;
+  margin: 20px 0;
+}
+
+header #results h1 p {
+  font-size: 0.7em;
+  color: #666;
+}
+
+header #results h1:hover {
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+header #results h1:hover > p {
+  font-weight: normal;
+}
+
 header #searchBox {
   z-index: 2;
   background: #fff;
@@ -476,6 +511,9 @@ footer {
   header #banner div:nth-child(2) {
     width: 148px;
   }
+  header #results {
+    top: 110px;
+  }
   #searchBtn {
     background: #fff;
     position: absolute;
@@ -509,6 +547,12 @@ footer {
     text-align: left;
     margin-top: 50px;
     width: 400px;
+  }
+  header #results {
+    top: 148px;
+    width: 450px;
+    right: 00px;
+    left: unset;
   }
   header #searchBox {
     width: 560px;

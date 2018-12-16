@@ -52,6 +52,36 @@
             font-size:50px;
         }
     }
+    #results{
+      display:none;
+      opacity:0;
+      font-size:20px;
+      position: absolute;
+      top:160px;
+      left:0px;
+      padding:20px;
+      width:100%;
+      z-index:20;
+      outline:2px solid #000;
+      box-shadow:0 0 20px rgba(0,0,0,.3);
+      background:#fff;
+      h1{
+        font-size:1.3em;
+        margin:20px 0;
+        p{
+          font-size:0.7em;
+          color:#666;
+        }
+      }
+      h1:hover{
+        font-weight:bold;
+        cursor: pointer;
+        color:#000;
+      }
+      h1:hover > p{
+        font-weight:normal;
+      }
+    }
     #searchBox{
       z-index:2;
       background:#fff;
@@ -434,6 +464,9 @@ code{
         width:148px;
       }
     }
+    header #results{
+      top:110px;
+    }
     #searchBtn{
       background:#fff;
       position:absolute;
@@ -466,6 +499,12 @@ code{
       text-align:left;
       margin-top:50px;
       width:400px;
+    }
+    header #results{
+      top:148px;
+      width:450px;
+      right:00px;
+      left:unset;
     }
     header #searchBox{
       width:560px;

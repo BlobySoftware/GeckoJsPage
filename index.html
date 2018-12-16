@@ -23,6 +23,8 @@
         <div id="searchBox">
             <input type="search" name="srBox" id="srBox" placeholder="Try to search">
         </div>
+        <div id="results">
+        </div>
         <div id="banner">
             <div id="gLetter"></div>
             <div id="middlePart"></div>
@@ -134,7 +136,7 @@ g("cssSelector").css("get":String, "cssRule":String);</code></pre>
 <h2 class="subHeads">Delay: <p>Defines the delay time when animation start in an element.</p></h2>
 <pre><code class="js">g("#elmnt").animates("color:red", 500, 1000); //Animates color:red in 500ms and starts in 1000ms</code></pre>
 <hr>
-<h1 class="heads" data-keywords="attr,attribute,attributes,get,set,has,remove">Attr</h1>
+<h1 class="heads" data-keywords="attr,attribute,attributes,get,set,has,remove,atribute">Attr</h1>
 <h2 class="subHeads">All attributes: <p>Basically all attributes of an element on html,its similar to css method and the basic structure is:</p></h2>
 <pre><code class="js desc">g("cssSelector").attr("attribute":String, "value":String);
 g("cssSelector").attr("method":String, "value":String);
@@ -240,12 +242,55 @@ g(["#searchBtn > i","#searchBox", "#searchBox > input"]).event("click", () =>{
     }
 })
 //Search
-g("#srBox").event("change", () =>{
-    getOffset();
+g("#srBox").event("change", (e) =>{
+    setTimeout(() => {
+        gotoE(e.target.value);
+    }, 100);
 })
-g("#srBox").event("keyup", () =>{
-    getOffset();
+g("#srBox").event("keyup", (e) =>{
+    setTimeout(() => {
+        gotoE(e.target.value);
+    }, 100);
 })
+
+
+function gotoE(el){
+    var ofst = getOffset();
+    var els = search(el);
+    var rs = g("#results");
+    if(ofst.length > 0){
+        g("#results").css("display:block").animates("display:block;opacity:1",300, 100);
+        rs.html("");
+        for(var i = 0;i < els.length;i++){
+            var title = els[i].text();
+            var parraf = els[i].nextSibling.nextSibling.find("p");
+            var h1 = document.createElement("h1");
+            var p = document.createElement("p");
+            h1.text(title);
+            p.text(parraf.text());
+            p.attr("data-top", ofst[i]);
+            h1.appendChild(p);
+            h1.attr("data-top", ofst[i]);
+            rs.appendChild(h1);
+        }
+        g(["#results > h1", "#results > h1 p"]).event("click", (e) =>{
+            window.scrollBy({
+                top : e.target.attr("data-top"),
+                left : 0,
+                behavior : "smooth"
+            })
+            g("#results").animates("display:block;opacity:0", 300);
+            setTimeout(() => {
+                g("#results").css("display:none;opacity:0");
+            }, 300);
+        })
+    }else{
+        g("#results").animates("display:block;opacity:0", 300);
+        setTimeout(() => {
+            g("#results").css("display:none;opacity:0");
+        }, 300);
+    }
+}
 
 function getOffset(){
     var word = g("#srBox").value;
@@ -258,12 +303,7 @@ function getOffset(){
     }else if(ps[0] != undefined){
         ofs.push(ps[0].offsetTop);
     }   
-
-    window.scrollBy({ 
-        top: ofs[0], // could be negative value
-        left: 0, 
-        behavior: 'smooth' 
-    });
+    return ofs;
 }
 
 function search(str){
@@ -282,12 +322,6 @@ function search(str){
     }
     return find;
 }
-Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d/2;
-	if (t < 1) return c/2*t*t + b;
-	t--;
-	return -c/2 * (t*(t-2) - 1) + b;
-};
 
 </script>
 </html>
