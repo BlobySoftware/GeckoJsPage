@@ -254,14 +254,26 @@ g("#srBox").event("keyup", (e) =>{
         gotoE(e.target.value);
     }, 100);
 })
+g(["#results", "#results h1", "#searchBtn > i","#searchBox", "#searchBox > input"]).event("oclick", () =>{
+    fadeOut();
+})
 
+function fadeOut(){
+    g("#results").animates("display:block;opacity:0", 300);
+        setTimeout(() => {
+            g("#results").css("display:none;opacity:0");
+        }, 300);
+}
+function fadeIn(){
+    g("#results").css("display:block").animates("display:block;opacity:1",300, 100);
+}
 
 function gotoE(el){
     var ofst = getOffset();
     var els = search(el);
     var rs = g("#results");
     if(ofst.length > 0){
-        g("#results").css("display:block").animates("display:block;opacity:1",300, 100);
+        fadeIn();
         rs.html("");
         for(var i = 0;i < els.length;i++){
             var title = els[i].text();
@@ -281,16 +293,10 @@ function gotoE(el){
                 left : 0,
                 behavior : "smooth"
             })
-            g("#results").animates("display:block;opacity:0", 300);
-            setTimeout(() => {
-                g("#results").css("display:none;opacity:0");
-            }, 300);
+            fadeOut();
         })
     }else{
-        g("#results").animates("display:block;opacity:0", 300);
-        setTimeout(() => {
-            g("#results").css("display:none;opacity:0");
-        }, 300);
+        fadeOut();
     }
 }
 
