@@ -196,7 +196,7 @@ main .mainTit {
 }
 
 main .conv {
-  font-size: 45px;
+  font-size: 35px;
 }
 
 main .titles {
@@ -232,6 +232,7 @@ main .heads {
   border-bottom: 5px solid #2196F3;
   font-weight: 900;
   margin: 0;
+  font-size: 50px;
 }
 
 main .ft {
@@ -474,6 +475,9 @@ footer {
   header #searchBtn i {
     font-size: 70px;
   }
+  main .conv {
+    font-size: 40px;
+  }
 }
 
 @media screen and (min-width: 345px) {
@@ -495,6 +499,9 @@ footer {
   }
   main .row p {
     font-size: 1.1em;
+  }
+  main .conv {
+    font-size: 45px;
   }
 }
 
