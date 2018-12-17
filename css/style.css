@@ -195,6 +195,10 @@ main .mainTit {
   outline: 2px solid rgba(0, 0, 0, 0.1);
 }
 
+main .conv {
+  font-size: 45px;
+}
+
 main .titles {
   text-align: center;
   font-size: 1.25em;
