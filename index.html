@@ -50,7 +50,7 @@
        
     <hr id="ftrs">
     <h1 class="mainTit">Objects</h1>
-    <h1 class="heads ft" data-keywords="select,selectors,get,basic,structure,element,elements,selection,one,list,ranges,range,limiters,limiter,$,g,geckojs,install,npm,download,jquery,installation">Selectors</h1>
+    <h1 class="heads ft" data-keywords="object,objects,select,selectors,get,basic,structure,element,elements,selection,one,list,ranges,range,limiters,limiter,$,g,geckojs,install,npm,download,jquery,installation">Selectors</h1>
     <h2 class="subHeads">Basic form: <p>You can select one element, or list of choised elements.</p></h2>
     <pre><code class="js desc">g("cssSelector":String, Number/Array);
 g(["cssSelectors"]:String Array, Number/Array);</code></pre>
@@ -82,12 +82,12 @@ g(".list", [max, min]).event("click", () =>{
               
 })</code></pre>
 <hr>
-<h1 class="heads" data-keywords="find,search,get,element,elements,list,select,selectors,$,g,get">Find</h1>
+<h1 class="heads" data-keywords="object,objects,find,search,get,element,elements,list,select,selectors,$,g,get">Find</h1>
 <h2 class="subHeads">Everythig:<p>You can find an element by class, id, tagName, the structure is:</p></h2>
 <pre><code class="js desc">g("cssSelector").find("searchElement":String);</code></pre>
 <pre><code class="js">g("#elmnt").find("#main");</code></pre>
 <hr>
-<h1 class="heads" data-keywords="events,event,outclick,oclick,addeventlistener,add,addevent,listener,listeners,set">Events</h1>
+<h1 class="heads" data-keywords="object,objects,events,event,outclick,oclick,addeventlistener,add,addevent,listener,listeners,set">Events</h1>
 <h2 class="subHeads">All events: <p>Basically all events in addEventListener method, see <a href="https://developer.mozilla.org/es/docs/Web/Events">Events docs MDN</a> for more information.</p></h2>
 <pre><code class="js desc">g("cssSelector").event("event":String);</code></pre>
 <pre><code class="js">g("#elmnt").event("yourEvent", () =>{
@@ -107,9 +107,9 @@ g(".list", [max, min]).event("click", () =>{
                               
 })</code></pre>
 <hr>
-<h1 class="heads" data-keywords="hover,mouse,out,mouseout,over,mouseover,css,style,function,functions,set">Hover</h1>
+<h1 class="heads" data-keywords="object,objects,hover,mouse,out,mouseout,over,mouseover,css,style,function,functions,set">Hover</h1>
 <h2 class="subHeads">Basic form: <p>Do something when mouse over and mouse out in two functions, the basic structure is:</p></h2>
-<pre><code class="js desc">g("cssSelector").hover(Function, Function);</code></pre>
+<pre><code class="js desc">g("cssSelector").hover(MouseOver:Function, MouseOut:Function);</code></pre>
 <pre><code class="js">g("#elmnt").hover(() =>{
 //Mouseover function ...
 
@@ -119,7 +119,7 @@ g(".list", [max, min]).event("click", () =>{
 
 });</code></pre>
 <hr>
-<h1 class="heads" data-keywords="css,style,css3,rules,properties,property,rule,get,computedstyle,styles,add">Css</h1>
+<h1 class="heads" data-keywords="object,objects,css,style,css3,rules,properties,property,rule,get,computedstyle,styles,add">Css</h1>
 <h2 class="subHeads">All rules: <p>Basically all css3 rules and browser support, see <a href="https://www.w3schools.com/csSref/">W3schools css</a> for more information, the basic structure is:</p></h2>
 <pre><code class="js desc">g("cssSelector").css("cssRules":String);
 g("cssSelector").css("get":String, "cssRule":String);</code></pre>
@@ -129,16 +129,16 @@ g("cssSelector").css("get":String, "cssRule":String);</code></pre>
 <h2 class="subHeads">Get: <p>Returns value of an specific property in an element.</p></h2>
 <pre><code class="js">g("#elmnt").css("get", "font-size"); //Return 2em (example)</code></pre>
 <hr>
-<h1 class="heads" data-keywords="css,style,css3,rules,properties,property,rule,get,computedstyle,styles,animation,animate,animations,transition,transitions,add">Animates</h1>
-<h2 class="subHeads">Css animation<p>Animates css of an element with css native not objects($), the dafualt time value is <span>150ms</span>, the basic structure is:</p></h2>
-<pre><code class="js desc">g("cssSelector").animates("cssRules":String, Number, Number);</code></pre>
+<h1 class="heads" data-keywords="object,objects,css,style,css3,rules,properties,property,rule,get,computedstyle,styles,animation,animate,animations,transition,transitions,add">Animates</h1>
+<h2 class="subHeads">Css animation:<p>Animates css of an element with css native not objects($), the dafualt time value is <span>150ms</span>, the basic structure is:</p></h2>
+<pre><code class="js desc">g("cssSelector").animates("cssRules":String, Duration:Number, Delay:Number);</code></pre>
 <pre><code class="js">g("#elmnt").animates("color:red");</code></pre>
 <h2 class="subHeads">Time: <p>Defines the duration of the animation in an element.</p></h2>
 <pre><code class="js">g("#elmnt").animates("color:red", 500); //Animates color:red in 500ms</code></pre>
 <h2 class="subHeads">Delay: <p>Defines the delay time when animation start in an element.</p></h2>
 <pre><code class="js">g("#elmnt").animates("color:red", 500, 1000); //Animates color:red in 500ms and starts in 1000ms</code></pre>
 <hr>
-<h1 class="heads" data-keywords="attr,attribute,attributes,get,set,has,remove,atribute">Attr</h1>
+<h1 class="heads" data-keywords="object,objects,attr,attribute,attributes,get,set,has,remove,atribute">Attr</h1>
 <h2 class="subHeads">All attributes: <p>Basically all attributes of an element on html,its similar to css method and the basic structure is:</p></h2>
 <pre><code class="js desc">g("cssSelector").attr("attribute":String, "value":String);
 g("cssSelector").attr("method":String, "value":String);
@@ -155,7 +155,7 @@ g("#elmnt").attr("get", "name"); //Returns newInput (example)
 g("#elmnt").attr("has", "name"); //Return false
 </code></pre>
 <hr>
-<h1 class="heads" data-keywords="set,get,remove,contains,has,replace,toggle,class,add,name,classname">Class</h1>
+<h1 class="heads" data-keywords="object,objects,set,get,remove,contains,has,replace,toggle,class,add,name,classname">Class</h1>
 <h2 class="subHeads">Class methods: <p>You can set, remove, replace, toggle, an if contains class of an element, the basic structure is:</p></h2>
 <pre><code class="js desc">g("cssSelector").class("addclassName":String);
 g("cssSelector").class("method":String, "className":String);
@@ -173,21 +173,221 @@ g("cssSelector").class("replace":String, "className":String, "newclassName":Stri
 <h2 class="subHeads">Contains: <p>Returns boolean if your element contain a class.</p></h2>
 <pre><code class="js">g("#elmnt").class("contains", "newElClass"); //Returns true</code></pre>
 <hr>
-<h1 class="heads" data-keywords="html,markup,text,set,get,add,append,child,appendchild,node,nodes,innerhtml,inner">Html</h1>
+<h1 class="heads" data-keywords="object,objects,html,markup,text,set,get,add,append,child,appendchild,node,nodes,innerhtml,inner">Html</h1>
 <h2 class="subHeads">Set innerHTML:<p>Append html text to your element, similar to innerHTML method, the basic structure is:</p></h2>
 <pre><code class="js desc">g("cssSelector").html("htmlText":String);</code></pre>
 <pre><code class="js">g("#elmnt").html("<i>Some text</i>");</code></pre>
 <h2 class="subHeads">Get: <p>Retturns html text inside of an element.</p></h2>
 <pre><code class="js">g("#elmnt").html(); //Returns "&#60;i&#62;Some text&#60;/i&#62;"</code></pre>
 <hr>
-<h1 class="heads" data-keywords="strings,string,text,plane,planetext,set,get,add">Text</h1>
+<h1 class="heads" data-keywords="object,objects,strings,string,text,plane,planetext,set,get,add">Text</h1>
 <h2 class="subHeads">Set text:<p>Set text value to your element, similar to textContent method, the basic structure is:</p></h2>
 <pre><code class="js desc">g("cssSelector").text("someText":String);</code></pre>
 <pre><code class="js">g("#elmnt").text("Some text");</code></pre>
 <h2 class="subHeads">Get: <p>Retturns string of text inside of an element.</p></h2>
 <pre><code class="js">g("#elmnt").text(); //Returns "Some text"</code></pre>
 <hr>
-    </main>
+<!--  
+    Section
+-->
+<h1 class="mainTit">Numbers</h1>
+<hr>
+<h1 class="heads" data-keywords="number,numbers,root,to,radical,square,pow,sqrt,math">Root</h1>
+<h2 class="subHeads">Math Sqrt:<p>Returns square root of a number, the default is <span>2</span> or root by a number, the structure is silimar to <span>Math.sqrt()</span>.</p></h2>
+<pre><code class="js desc">var n = Number;
+n.root(Exponent:Number);</code></pre>
+<pre><code class="js">var n = 4;
+n.root();//Returns 2</code></pre>
+<h2 class="subHeads">Root to:<p>Root by a number, the structure is silimar to <span>Math.pow()</span>.</p></h2>
+<pre><code class="js">var n = 4;
+n.root(3);//Returns 1.587..</code></pre>
+<hr>
+<h1 class="heads" data-keywords="number,numbers,pow,to,math,exponent,elevate">Pow</h1>
+<h2 class="subHeads">Math Pow:<p>Returns a number elevate by exponent, the default exponent is <span>2</span>, the structure is silimar to <span>Math.pow()</span>.</p></h2>
+<pre><code class="js desc">var n = Number;
+n.pow(Exponent:Number);</code></pre>
+<pre><code class="js">var n = 4;
+n.pow();//Returns 16</code></pre>
+<h2 class="subHeads">Pow to:<p>Elevate a number by exponent, the structure is silimar to <span>Math.pow(Number)</span>.</p></h2>
+<pre><code class="js">var n = 4;
+n.pow(3);//Returns 64</code></pre>
+<hr>
+<!--  
+    Section
+-->
+<h1 class="mainTit">Arrays</h1>
+<hr>
+<h1 class="heads" data-keywords="array,arrays,add,sum,substract,multiply,divide,get,root,elevate,module,mod,concat,between,math,+,-,*,x,/,%,^,rad,|,.,oper,operation,operations">Operations</h1>
+<h2 class="subHeads">Array operations:<p>You can add, substract, multiply, divide, get root, elevate, get module, concat between arrays, the structure is:</p></h2>
+<pre><code class="js desc">var arry = Array;
+arry.operation("method":String, Number);</code></pre>
+<pre><code class="js">var arry = [4, 7, 5];
+arry.operation("add", 2); //Returns [6, 9, 7]</code></pre>
+<h2 class="subHeads">Add:<p>Add number to array values, the method options are:</p><ul>
+    <li>+</li>
+    <li>add</li>
+    <li>plus</li>
+</ul> </h2>
+<pre><code class="js">var arry = [3, 5, 9];
+arry.operation("+", 2); //Returns [5, 7, 11]</code></pre>
+<h2 class="subHeads">Remove:<p>Substract number to array values, the method options are:</p><ul>
+        <li>-</li>
+        <li>dif</li>
+        <li>minus</li>
+    </ul> </h2>
+    <pre><code class="js">var arry = [6, 4, 8];
+arry.operation("-", 3); //Returns [3, 1, 5]</code></pre>
+<h2 class="subHeads">Multiply:<p>Multiply number to array values, the method options are:</p><ul>
+        <li>*</li>
+        <li>x</li>
+        <li>mult</li>
+    </ul> </h2>
+    <pre><code class="js">var arry = [4, 11, 7];
+arry.operation("x", 5); //Returns [20, 55, 35]</code></pre>
+<h2 class="subHeads">Divide:<p>Divide number to array values, the method options are:</p><ul>
+        <li>/</li>
+        <li>div</li>
+        <li>parts</li>
+    </ul> </h2>
+    <pre><code class="js">var arry = [94, 48, 56];
+arry.operation("/", 8); //Returns [11.75, 6, 7]</code></pre>
+<h2 class="subHeads">Elevate:<p>Elevate number to array values, the method options are:</p><ul>
+        <li>^</li>
+        <li>elev</li>
+        <li>to</li>
+        <li>pow</li>
+    </ul> </h2>
+    <pre><code class="js">var arry = [5, 2, 3];
+arry.operation("^", 3); //Returns [125, 8, 27]</code></pre>
+<h2 class="subHeads">Root:<p>Root by number to array values,the default exponent is <span>2</span>, the method options are:</p><ul>
+        <li>|</li>
+        <li>root</li>
+        <li>sqrt</li>
+        <li>rad</li>
+    </ul> </h2>
+    <pre><code class="js">var arry = [128, 64, 82];
+arry.operation("|", 4); //Returns [3.36, 2.82, 3.009]</code></pre>
+<h2 class="subHeads">Mod:<p>Get mod of a number to array values, the method options are:</p><ul>
+        <li>%</li>
+        <li>mod</li>
+        <li>resd</li>
+    </ul> </h2>
+    <pre><code class="js">var arry = [4, 3, 8];
+arry.operation("%", 2); //Returns [0, 1, 0]</code></pre>
+<h2 class="subHeads">Concat:<p>Concat Strings or number to array values, the method options are:</p><ul>
+        <li>.</li>
+        <li>concat</li>
+        <li>ct</li>
+    </ul> </h2>
+    <pre><code class="js">var arry = ["g", 5, 2];
+arry.operation(".", 2); //Returns ["g2", 52, 22]
+arry.operation(".", "j"); //Returns ["gj", "5j", "2j"]</code></pre>
+<hr>
+<h1 class="heads" data-keywords="array,arrays,max,maximum,value,oper,operation,operations">Max</h1>
+<h2 class="subHeads">Max value:<p>You can get the max value of a list of numbers, the structure is:</p></h2>
+<pre><code class="js desc">var arry = Number Array;
+arry.max();</code></pre>
+<pre><code class="js">var arry = [7, 2, 31];
+arry.max(); //Returns 31</code></pre>
+<hr>
+<h1 class="heads" data-keywords="array,arrays,min,minimum,value,oper,operation,operations">Min</h1>
+<h2 class="subHeads">Min value:<p>You can get the min value of a list of numbers, the structure is:</p></h2>
+<pre><code class="js desc">var arry = Number Array;
+arry.max();</code></pre>
+<pre><code class="js">var arry = [4, 1, 13];
+arry.min(); //Returns 1</code></pre>
+<hr>
+<h1 class="heads" data-keywords="array,arrays,randomize,order,random,value,oper,operation,operations">Randomize</h1>
+<h2 class="subHeads">Random value:<p>Randomize the order of the elements in your array, , the structure is:</p></h2>
+<pre><code class="js desc">var arry = Array;
+arry.randomize();</code></pre>
+<pre><code class="js">var arry = ["g", 5, 3, "js"];
+arry.randomize(); //Returns [3, "g", 5, "js"]</code></pre>
+<hr>
+<h1 class="heads" data-keywords="array,arrays,combine,concat,add,value,oper,operation,operations">Combine</h1>
+<h2 class="subHeads">Combine arrays:<p>Combine two or more arrays in one, the structure is:</p></h2>
+<pre><code class="js desc">var arry = Array;
+var arry2 = Array;
+arry.combine(arry2);</code></pre>
+<pre><code class="js">var arry = ["l", 1, "a"];
+var arry2 = [4, "g", 5];
+arry.combine(arry2); //Returns ["l", 1, "a", 4, "g", 5]</code></pre>
+<hr>
+<!--  
+    Section
+-->
+<h1 class="mainTit">Strings</h1>
+<hr>
+<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,char,character">Replace At</h1>
+<h2 class="subHeads">Set Index:<p>Replace a substring or character in a specific index of a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.replaceAt(Index:Number, "replace":String);</code></pre>
+<pre><code class="js">var str = "Hello World";
+str.replaceAt(5, ","); //Returns "Hello,World"</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,all,char,character">Replace All</h1>
+<h2 class="subHeads">All characters:<p>Replace all characters in a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.replaceAll("char":String, "replace":String);</code></pre>
+<pre><code class="js">var str = "Go to Moon";
+str.replaceAll("o", "x"); //Returns "Gx tx Mxxn"</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,search,char,character">Replace Index</h1>
+<h2 class="subHeads">Replace same:<p>Replace the specific index of a repeated character of a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.replaceIndex("Search":String, Index:Number, "Replace":String);</code></pre>
+<pre><code class="js">var str = "You are awesome";
+str.replaceIndex("e", 1, "o"); //Returns "You are awosome"</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,last,char,character">Last Index Of</h1>
+<h2 class="subHeads">Search Last:<p>Returns the position of the last character searched, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.lastIndexOf("char":String);</code></pre>
+<pre><code class="js">var str = "Best library";
+str.lastIndexOf("b"); //Returns 7</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,position,ge,char,charactert">Get Search Position</h1>
+<h2 class="subHeads">Search Last:<p>Returns the position of the last character searched, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.lastIndexOf("char":String);</code></pre>
+<pre><code class="js">var str = "Best library";
+str.lastIndexOf("b"); //Returns 7</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,repeat,char,character">Search Repeat</h1>
+<h2 class="subHeads">If repeat:<p>Returns bolean of how much substrings or characters are in a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.searchRepeat(Repeat:Number, "char":String);</code></pre>
+<pre><code class="js">var str = "We are kids";
+str.searchRepeat(2, "e"); //Returns true</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,repeat,char,character,get">Get Repeat</h1>
+<h2 class="subHeads">Char repeats:<p>Returns how much substrings or characters are in a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.getRepeat("char":String);</code></pre>
+<pre><code class="js">var str = "Greased Lightning";
+str.getRepeat("g"); //3</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,char,character,cut,remove,divide,div,cuts">Cut</h1>
+<h2 class="subHeads">Extract:<p>Cut a part of a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.getRepeat(cutStart:Number, cutEnd:Number);</code></pre>
+<pre><code class="js">var str = "Easy as pie";
+str.cut(4, 7); //Easy pie</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,char,character,hex,hexs,rgbas,rgbs,rgb,rgba,color,colors,hexadecimal,hexadecimals">toHex</h1>
+<h2 class="subHeads">From Rgb to Hex:<p>Transforms from RGB color string to HEX code color string, the structure is:</p></h2>
+<pre><code class="js desc">var str = "(r,g,b)":String;
+str.toHex();</code></pre>
+<pre><code class="js">var str = "(23,63,16)";
+str.toHex(); //Returns "#173f10"</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,char,character,hex,hexs,rgbas,rgbs,rgb,rgba,color,colors,hexadecimal,hexadecimals">toRGB</h1>
+<h2 class="subHeads">From Hex to Rgb:<p>Transforms from HEX color string to RGB code color string, the structure is:</p></h2>
+<pre><code class="js desc">var str = "#rgb":String;
+str.toRGB();</code></pre>
+<pre><code class="js">var str = "#4b3f13";
+str.toRGB(); //Returns "(75,63,18)"</code></pre>
+</main>
     <section id="killD">
         <h1>Help us to <strong>Kill</strong> the dollar ($)</h1>
     </section>
@@ -257,7 +457,6 @@ g("#srBox").event("keyup", (e) =>{
 g(["#results", "#results h1", "#searchBtn > i","#searchBox", "#searchBox > input"]).event("oclick", () =>{
     fadeOut();
 })
-
 function fadeOut(){
     g("#results").animates("display:block;opacity:0", 300);
         setTimeout(() => {
