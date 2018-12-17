@@ -72,14 +72,14 @@ arry.toInt();
 arry.toString();
 arry.toObject();</code></pre>
 <pre><code class="js">var arry = ["3", 5, "1", 8];
-arry.toInt() //Returns 3518
+arry.toInt(); //Returns 3518
 
 var arry2 = ["g", "J", "S", "v.", 1];
 arry2.toString(); //Returns "gJSv.1"
 
 var arry3 = ["name", "gJS", "version", "1.0"];
-arry3.toObject() //Returns {name: "gJS", version: "1.0"}
-arry3.toObject(true) //Returns {0: "name", 1: "gJS", 2:"version", 3:"1.0"}</code></pre>
+arry3.toObject(); //Returns {name: "gJS", version: "1.0"}
+arry3.toObject(true); //Returns {0: "name", 1: "gJS", 2:"version", 3:"1.0"}</code></pre>
 <hr>
 <h1 class="heads" data-keywords="converts,convertion,convertions,strings,string,array,arrays,int,ints,number,numbers,object,objects,to">Objects</h1>
 <h2 class="subHeads">Data convertion:<p>Transform from Object to String and Array.</p></h2>
@@ -87,10 +87,10 @@ arry3.toObject(true) //Returns {0: "name", 1: "gJS", 2:"version", 3:"1.0"}</code
 obj.toString();
 obj.toArray();</code></pre>
 <pre><code class="js">var obj = {name : "Gecko", type: "JavaScript"}
-obj.toString() //Returns "name:Gecko, type:JavaScript";
+obj.toString(); //Returns "name:Gecko, type:JavaScript";
 
 var obj3 = {job : "Enginer", weight: "73kg"}
-obj3.toArray() //Returns ["job", "Enginer", "weight", "73kg"];
+obj3.toArray(); //Returns ["job", "Enginer", "weight", "73kg"];
 </code></pre>
 <hr>
 <h1 class="heads" data-keywords="converts,convertion,convertions,strings,string,array,arrays,int,ints,number,numbers,object,objects,to">Numbers</h1>
@@ -106,7 +106,7 @@ n.toArray(); //Returns [3, 4, 5, 7]
 
 n.toObject(); //Returns {3:5,5:7}
 
-n.toObject(true) //Returns {0:"3", 1:"5", 2:"5", 3:"7"}</code></pre>
+n.toObject(true); //Returns {0:"3", 1:"5", 2:"5", 3:"7"}</code></pre>
 <hr>
 <h1 class="mainTit">Tools</h1>
 <hr>
@@ -123,30 +123,30 @@ g(["cssSelectors"]:String Array, Number/Array);</code></pre>
     <pre><code class="js">g("#elmnt").event("click", () =>{
 //Do something ...
 
-})
+});
 
 g(["#elmnt1", "#elmnt2", "#elmnt3"]).event("click", () =>{
 //Do something (three elements selected)
 
-})</code></pre>
+});</code></pre>
     <h2 class="subHeads">Select one: <p>You can select an specific element of a list.</p></h2>
     <pre><code class="js">var number = 2;
 g(".list", number).event("click", () =>{
 //Do something (3th element)
               
-})</code></pre>
+});</code></pre>
 <h2 class="subHeads">Limiters: <p>You can select an specific range of elements in a list from 0 to 'limiter'.</p></h2>
     <pre><code class="js">var limiter = 7;
 g(".list", limiter).event("click", () =>{
 //Do something (from first element to 8th element)
               
-})</code></pre>
+});</code></pre>
 <h2 class="subHeads">Ranges: <p>You can select a range of elements in a list with [Max, Min] or [Min, Max] it doesn't matter, and try to use negative coeficients like [3][-1].</p></h2>
     <pre><code class="js">var min = 3, max = 8;
 g(".list", [max, min]).event("click", () =>{
 //Do something (from 4th element to 9th element)
               
-})</code></pre>
+});</code></pre>
 <hr>
 <h1 class="heads" data-keywords="object,objects,find,search,get,element,elements,list,select,selectors,$,g,get">Find</h1>
 <h2 class="subHeads">Everythig:<p>You can find an element by class, id, tagName, the structure is:</p></h2>
@@ -159,7 +159,7 @@ g(".list", [max, min]).event("click", () =>{
 <pre><code class="js">g("#elmnt").event("yourEvent", () =>{
 //Do something ...
                       
-})</code></pre>
+});</code></pre>
 <h2 class="subHeads">outClick: <p>check if you click outside of an element, you can use by typing:</p> 
 <ul>
 <li>outClick</li>
@@ -171,7 +171,7 @@ g(".list", [max, min]).event("click", () =>{
 <pre><code class="js">g("#elmnt").event("oClick", () =>{
 //Do something ...
                               
-})</code></pre>
+});</code></pre>
 <hr>
 <h1 class="heads" data-keywords="object,objects,hover,mouse,out,mouseout,over,mouseover,css,style,function,functions,set">Hover</h1>
 <h2 class="subHeads">Basic form: <p>Do something when mouse over and mouse out in two functions, the basic structure is:</p></h2>
@@ -329,7 +329,7 @@ str.toRGB();</code></pre>
 str.toRGB(); //Returns "(75,63,18)"</code></pre>
 <hr>
 <h1 class="heads" data-keywords="string,strings,substring,of,substr,at,search,to,lower,case,upper">Capitalize</h1>
-<h2 class="subHeads">Upper Case<p>Add capital letter, transforms all string in UpperCase, the structure is:</p></h2>
+<h2 class="subHeads">Upper Case:<p>Add capital letter, transforms all string in UpperCase, the structure is:</p></h2>
 <pre><code class="js desc">var str = String;
 str.capitalize();</code></pre>
 <pre><code class="js">var str = "break the ice";
@@ -456,10 +456,10 @@ n.root(3);//Returns 1.587..</code></pre>
 <pre><code class="js desc">var n = Number;
 n.pow(Exponent:Number);</code></pre>
 <pre><code class="js">var n = 4;
-n.pow();//Returns 16</code></pre>
+n.pow(); //Returns 16</code></pre>
 <h2 class="subHeads">Pow to:<p>Elevate a number by exponent, the structure is silimar to <span>Math.pow(Number)</span>.</p></h2>
 <pre><code class="js">var n = 4;
-n.pow(3);//Returns 64</code></pre>
+n.pow(3); //Returns 64</code></pre>
 <hr>
 </main>
     <section id="killD">
