@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#2196F3">
     <meta name="description" content="JS Library, with the most usually tools in your project, like String to Int convertions, array operations, async functions, promises, callbacks, ES6 implementation, HTTP request, AJAX, data convertions, data parsers, JSON, responsive design, dom manipulation, etc.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0, min-scale=1.0, user-scalabe=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -481,7 +481,9 @@
     <script src="../GeckoJS/gecko.js"></script>
     <script src="./js/highlight.pack.js"></script>
     <script>
-        document.body.requestFullscreen();
+        g("#banner").event("click", ()=>{
+            document.body.requestFullscreen();
+        })
     g("#copyBtn").event("click", () =>{
         g("#npmCode").select();
         document.execCommand("copy");
