@@ -47,8 +47,74 @@
                 <h3>Please never use</h3>
                 <h1>jQuery</h1>
         </div>
-       
-    <hr id="ftrs">
+        <hr id="ftrs">
+       <h1 class="mainTit conv">Convertions</h1>
+<hr>
+<h1 class="heads" data-keywords="converts,convertion,convertions,strings,string,array,arrays,int,ints,number,numbers,object,objects,to">Strings</h1>
+<h2 class="subHeads">Data convertion:<p>Transform from string to Array, Number and Object.</p></h2>
+<pre><code class="js desc">var str = String;
+str.toInt();
+str.toArray();
+str.toObject();</code></pre>
+<pre><code class="js">var str = "1536";
+str.toInt(); //Returns 1536
+
+str.toArray(); //Returns [1, 5, 3, 6]
+
+str.toObject(); //Returns {1: "5", 3: "6"}
+
+str.toObject(true); //Returns {0: "1", 1: "5", 2:"3", 3:"6}</code></pre>
+<hr>
+<h1 class="heads" data-keywords="converts,convertion,convertions,strings,string,array,arrays,int,ints,number,numbers,object,objects,to">Arrays</h1>
+<h2 class="subHeads">Data convertion:<p>Transform from Array to String, Number and Object.</p></h2>
+<pre><code class="js desc">var arry = Array;
+arry.toInt();
+arry.toString();
+arry.toObject();</code></pre>
+<pre><code class="js">var arry = ["3", 5, "1", 8];
+arry.toInt() //Returns 3518
+
+var arry2 = ["g", "J", "S", "v.", 1];
+arry2.toString(); //Returns "gJSv.1"
+
+var arry3 = ["name", "gJS", "version", "1.0"];
+arry3.toObject() //Returns {name: "gJS", version: "1.0"}
+arry3.toObject(true) //Returns {0: "name", 1: "gJS", 2:"version", 3:"1.0"}</code></pre>
+<hr>
+<h1 class="heads" data-keywords="converts,convertion,convertions,strings,string,array,arrays,int,ints,number,numbers,object,objects,to">Objects</h1>
+<h2 class="subHeads">Data convertion:<p>Transform from Object to String and Array.</p></h2>
+<pre><code class="js desc">var obj = Object;
+obj.toString();
+obj.toArray();</code></pre>
+<pre><code class="js">var obj = {name : "Gecko", type: "JavaScript"}
+obj.toString() //Returns "name:Gecko, type:JavaScript";
+
+var obj3 = {job : "Enginer", weight: "73kg"}
+obj3.toArray() //Returns ["job", "Enginer", "weight", "73kg"];
+</code></pre>
+<hr>
+<h1 class="heads" data-keywords="converts,convertion,convertions,strings,string,array,arrays,int,ints,number,numbers,object,objects,to">Numbers</h1>
+<h2 class="subHeads">Data convertion:<p>Transform from string to Array, Number and Object.</p></h2>
+<pre><code class="js desc">var n = Number;
+n.toString();
+n.toArray();
+n.toObject();</code></pre>
+<pre><code class="js">var n = 3457;
+n.toString(); //Returns "3457"
+
+n.toArray(); //Returns [3, 4, 5, 7]
+
+n.toObject(); //Returns {3:5,5:7}
+
+n.toObject(true) //Returns {0:"3", 1:"5", 2:"5", 3:"7"}</code></pre>
+<hr>
+<h1 class="mainTit">Tools</h1>
+<hr>
+<h1 class="heads" data-keywords="">Random Range</h1>
+<h2 class="subHeads">Get Random:<p>Get random numbers by a range, the structure is:</p></h2>
+<pre><code class="js desc">var n = randomRange(Min:Number, Max:Number);</code></pre>
+<pre><code class="js">var n = randomRange(3, 9); //Returns any number from 3 to 9</code></pre>
+<hr>
     <h1 class="mainTit">Objects</h1>
     <h1 class="heads ft" data-keywords="object,objects,select,selectors,get,basic,structure,element,elements,selection,one,list,ranges,range,limiters,limiter,$,g,geckojs,install,npm,download,jquery,installation">Selectors</h1>
     <h2 class="subHeads">Basic form: <p>You can select one element, or list of choised elements.</p></h2>
@@ -190,27 +256,84 @@ g("cssSelector").class("replace":String, "className":String, "newclassName":Stri
 <!--  
     Section
 -->
-<h1 class="mainTit">Numbers</h1>
+<h1 class="mainTit">Strings</h1>
 <hr>
-<h1 class="heads" data-keywords="number,numbers,root,to,radical,square,pow,sqrt,math">Root</h1>
-<h2 class="subHeads">Math Sqrt:<p>Returns square root of a number, the default is <span>2</span> or root by a number, the structure is silimar to <span>Math.sqrt()</span>.</p></h2>
-<pre><code class="js desc">var n = Number;
-n.root(Exponent:Number);</code></pre>
-<pre><code class="js">var n = 4;
-n.root();//Returns 2</code></pre>
-<h2 class="subHeads">Root to:<p>Root by a number, the structure is silimar to <span>Math.pow()</span>.</p></h2>
-<pre><code class="js">var n = 4;
-n.root(3);//Returns 1.587..</code></pre>
+<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,char,chars,characters,character">Replace At</h1>
+<h2 class="subHeads">Set Index:<p>Replace a substring or character in a specific index of a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.replaceAt(Index:Number, "replace":String);</code></pre>
+<pre><code class="js">var str = "Hello World";
+str.replaceAt(5, ","); //Returns "Hello,World"</code></pre>
 <hr>
-<h1 class="heads" data-keywords="number,numbers,pow,to,math,exponent,elevate">Pow</h1>
-<h2 class="subHeads">Math Pow:<p>Returns a number elevate by exponent, the default exponent is <span>2</span>, the structure is silimar to <span>Math.pow()</span>.</p></h2>
-<pre><code class="js desc">var n = Number;
-n.pow(Exponent:Number);</code></pre>
-<pre><code class="js">var n = 4;
-n.pow();//Returns 16</code></pre>
-<h2 class="subHeads">Pow to:<p>Elevate a number by exponent, the structure is silimar to <span>Math.pow(Number)</span>.</p></h2>
-<pre><code class="js">var n = 4;
-n.pow(3);//Returns 64</code></pre>
+<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,all,char,chars,characters,character">Replace All</h1>
+<h2 class="subHeads">All characters:<p>Replace all characters in a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.replaceAll("char":String, "replace":String);</code></pre>
+<pre><code class="js">var str = "Go to Moon";
+str.replaceAll("o", "x"); //Returns "Gx tx Mxxn"</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,search,char,chars,characters,character">Replace Index</h1>
+<h2 class="subHeads">Replace same:<p>Replace the specific index of a repeated character of a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.replaceIndex("Search":String, Index:Number, "Replace":String);</code></pre>
+<pre><code class="js">var str = "You are awesome";
+str.replaceIndex("e", 1, "o"); //Returns "You are awosome"</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,last,char,chars,characters,character">Last Index Of</h1>
+<h2 class="subHeads">Search Last:<p>Returns the position of the last character searched, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.lastIndexOf("char":String);</code></pre>
+<pre><code class="js">var str = "Best library";
+str.lastIndexOf("b"); //Returns 7</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,position,ge,char,chars,characters,charactert">Get Search Position</h1>
+<h2 class="subHeads">Search Last:<p>Returns the position of the last character searched, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.lastIndexOf("char":String);</code></pre>
+<pre><code class="js">var str = "Best library";
+str.lastIndexOf("b"); //Returns 7</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,repeat,char,chars,characters,character">Search Repeat</h1>
+<h2 class="subHeads">If repeat:<p>Returns bolean of how much substrings or characters are in a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.searchRepeat(Repeat:Number, "char":String);</code></pre>
+<pre><code class="js">var str = "We are kids";
+str.searchRepeat(2, "e"); //Returns true</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,repeat,char,chars,characters,character,get">Get Repeat</h1>
+<h2 class="subHeads">Char repeats:<p>Returns how much substrings or characters are in a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.getRepeat("char":String);</code></pre>
+<pre><code class="js">var str = "Greased Lightning";
+str.getRepeat("g"); //3</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,char,character,chars,characters,cut,remove,divide,div,cuts">Cut</h1>
+<h2 class="subHeads">Extract:<p>Cut a part of a string, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.getRepeat(cutStart:Number, cutEnd:Number);</code></pre>
+<pre><code class="js">var str = "Easy as pie";
+str.cut(4, 7); //Easy pie</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,of,substr,at,char,character,chars,characters,hex,hexs,rgbas,rgbs,rgb,rgba,color,colors,hexadecimal,hexadecimals">toHex</h1>
+<h2 class="subHeads">From Rgb to Hex:<p>Transforms from RGB color string to HEX code color string, the structure is:</p></h2>
+<pre><code class="js desc">var str = "(r,g,b)":String;
+str.toHex();</code></pre>
+<pre><code class="js">var str = "(23,63,16)";
+str.toHex(); //Returns "#173f10"</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,of,substr,at,char,character,chars,characters,hex,hexs,rgbas,rgbs,rgb,rgba,color,colors,hexadecimal,hexadecimals">toRGB</h1>
+<h2 class="subHeads">From Hex to Rgb:<p>Transforms from HEX color string to RGB code color string, the structure is:</p></h2>
+<pre><code class="js desc">var str = "#rgb":String;
+str.toRGB();</code></pre>
+<pre><code class="js">var str = "#4b3f13";
+str.toRGB(); //Returns "(75,63,18)"</code></pre>
+<hr>
+<h1 class="heads" data-keywords="string,strings,substring,of,substr,at,search,to,lower,case,upper">Capitalize</h1>
+<h2 class="subHeads">Upper Case<p>Add capital letter, transforms all string in UpperCase, the structure is:</p></h2>
+<pre><code class="js desc">var str = String;
+str.capitalize();</code></pre>
+<pre><code class="js">var str = "break the ice";
+str.capitalize(); //Returns "Break the ice""</code></pre>
 <hr>
 <!--  
     Section
@@ -316,77 +439,28 @@ arry.combine(arry2); //Returns ["l", 1, "a", 4, "g", 5]</code></pre>
 <!--  
     Section
 -->
-<h1 class="mainTit">Strings</h1>
+<h1 class="mainTit">Numbers</h1>
 <hr>
-<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,char,character">Replace At</h1>
-<h2 class="subHeads">Set Index:<p>Replace a substring or character in a specific index of a string, the structure is:</p></h2>
-<pre><code class="js desc">var str = String;
-str.replaceAt(Index:Number, "replace":String);</code></pre>
-<pre><code class="js">var str = "Hello World";
-str.replaceAt(5, ","); //Returns "Hello,World"</code></pre>
+<h1 class="heads" data-keywords="number,numbers,root,to,radical,square,pow,sqrt,math">Root</h1>
+<h2 class="subHeads">Math Sqrt:<p>Returns square root of a number, the default is <span>2</span> or root by a number, the structure is silimar to <span>Math.sqrt()</span>.</p></h2>
+<pre><code class="js desc">var n = Number;
+n.root(Exponent:Number);</code></pre>
+<pre><code class="js">var n = 4;
+n.root();//Returns 2</code></pre>
+<h2 class="subHeads">Root to:<p>Root by a number, the structure is silimar to <span>Math.pow()</span>.</p></h2>
+<pre><code class="js">var n = 4;
+n.root(3);//Returns 1.587..</code></pre>
 <hr>
-<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,all,char,character">Replace All</h1>
-<h2 class="subHeads">All characters:<p>Replace all characters in a string, the structure is:</p></h2>
-<pre><code class="js desc">var str = String;
-str.replaceAll("char":String, "replace":String);</code></pre>
-<pre><code class="js">var str = "Go to Moon";
-str.replaceAll("o", "x"); //Returns "Gx tx Mxxn"</code></pre>
+<h1 class="heads" data-keywords="number,numbers,pow,to,math,exponent,elevate">Pow</h1>
+<h2 class="subHeads">Math Pow:<p>Returns a number elevate by exponent, the default exponent is <span>2</span>, the structure is silimar to <span>Math.pow()</span>.</p></h2>
+<pre><code class="js desc">var n = Number;
+n.pow(Exponent:Number);</code></pre>
+<pre><code class="js">var n = 4;
+n.pow();//Returns 16</code></pre>
+<h2 class="subHeads">Pow to:<p>Elevate a number by exponent, the structure is silimar to <span>Math.pow(Number)</span>.</p></h2>
+<pre><code class="js">var n = 4;
+n.pow(3);//Returns 64</code></pre>
 <hr>
-<h1 class="heads" data-keywords="string,strings,replace,substring,index,of,substr,at,search,char,character">Replace Index</h1>
-<h2 class="subHeads">Replace same:<p>Replace the specific index of a repeated character of a string, the structure is:</p></h2>
-<pre><code class="js desc">var str = String;
-str.replaceIndex("Search":String, Index:Number, "Replace":String);</code></pre>
-<pre><code class="js">var str = "You are awesome";
-str.replaceIndex("e", 1, "o"); //Returns "You are awosome"</code></pre>
-<hr>
-<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,last,char,character">Last Index Of</h1>
-<h2 class="subHeads">Search Last:<p>Returns the position of the last character searched, the structure is:</p></h2>
-<pre><code class="js desc">var str = String;
-str.lastIndexOf("char":String);</code></pre>
-<pre><code class="js">var str = "Best library";
-str.lastIndexOf("b"); //Returns 7</code></pre>
-<hr>
-<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,position,ge,char,charactert">Get Search Position</h1>
-<h2 class="subHeads">Search Last:<p>Returns the position of the last character searched, the structure is:</p></h2>
-<pre><code class="js desc">var str = String;
-str.lastIndexOf("char":String);</code></pre>
-<pre><code class="js">var str = "Best library";
-str.lastIndexOf("b"); //Returns 7</code></pre>
-<hr>
-<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,repeat,char,character">Search Repeat</h1>
-<h2 class="subHeads">If repeat:<p>Returns bolean of how much substrings or characters are in a string, the structure is:</p></h2>
-<pre><code class="js desc">var str = String;
-str.searchRepeat(Repeat:Number, "char":String);</code></pre>
-<pre><code class="js">var str = "We are kids";
-str.searchRepeat(2, "e"); //Returns true</code></pre>
-<hr>
-<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,repeat,char,character,get">Get Repeat</h1>
-<h2 class="subHeads">Char repeats:<p>Returns how much substrings or characters are in a string, the structure is:</p></h2>
-<pre><code class="js desc">var str = String;
-str.getRepeat("char":String);</code></pre>
-<pre><code class="js">var str = "Greased Lightning";
-str.getRepeat("g"); //3</code></pre>
-<hr>
-<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,char,character,cut,remove,divide,div,cuts">Cut</h1>
-<h2 class="subHeads">Extract:<p>Cut a part of a string, the structure is:</p></h2>
-<pre><code class="js desc">var str = String;
-str.getRepeat(cutStart:Number, cutEnd:Number);</code></pre>
-<pre><code class="js">var str = "Easy as pie";
-str.cut(4, 7); //Easy pie</code></pre>
-<hr>
-<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,char,character,hex,hexs,rgbas,rgbs,rgb,rgba,color,colors,hexadecimal,hexadecimals">toHex</h1>
-<h2 class="subHeads">From Rgb to Hex:<p>Transforms from RGB color string to HEX code color string, the structure is:</p></h2>
-<pre><code class="js desc">var str = "(r,g,b)":String;
-str.toHex();</code></pre>
-<pre><code class="js">var str = "(23,63,16)";
-str.toHex(); //Returns "#173f10"</code></pre>
-<hr>
-<h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,char,character,hex,hexs,rgbas,rgbs,rgb,rgba,color,colors,hexadecimal,hexadecimals">toRGB</h1>
-<h2 class="subHeads">From Hex to Rgb:<p>Transforms from HEX color string to RGB code color string, the structure is:</p></h2>
-<pre><code class="js desc">var str = "#rgb":String;
-str.toRGB();</code></pre>
-<pre><code class="js">var str = "#4b3f13";
-str.toRGB(); //Returns "(75,63,18)"</code></pre>
 </main>
     <section id="killD">
         <h1>Help us to <strong>Kill</strong> the dollar ($)</h1>
