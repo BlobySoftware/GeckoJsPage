@@ -1,0 +1,15 @@
+{
+    "short_name": "GeckoJS",
+    "name": "GeckoJS Documentation",
+    "icons": [
+      {
+        "src": "./img/fav.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "./index.html",
+    "display": "standalone",
+    "orientation": "portrait"
+}
+  
