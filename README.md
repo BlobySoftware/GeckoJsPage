@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/alexsan134/GeckoJS/master/bns.png" width="500">
+  <img src="https://raw.githubusercontent.com/blobysoftware/GeckoJS/master/bns.png" width="500">
   <br/>
   <br/>
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
@@ -11,7 +11,7 @@
 
 ## We have 1ms per loop vs 5ms per loop for jQuery
 <div align="center"><h1>Installation (Basic and Compressed)</h1>
-<h2>See the oficial documentation at <a href="https://alexsan134.github.io/GeckoJsPage">GeckoJs Page</a></h2>
+<h2>See the oficial documentation at <a href="https://blobysoftware.github.io/GeckoJsPage/">GeckoJs Page</a></h2>
 </div>
 
 ```sh
@@ -21,9 +21,9 @@ npm i geckojs
 
 <dl>
   <dt><h2>Latest Features:</h2></dt>
+  <dd>* Get absolute offset from the top of the window</dd>
   <dd>* Select list of choised elements</dd>
   <dd>* New event outClick, check if you click outside of an element</dd>
-  <dd>* All data convertions (String, Array, Number, Object)</dd>
 </dl>
 
 -------------
