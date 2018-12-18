@@ -1,0 +1,31 @@
+{
+  "name": "geckojs",
+  "version": "1.1.31",
+  "description": "JS Library, with the most usually tools in your project.",
+  "main": "gecko.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blobysoftware/GeckoJS.git"
+  },
+  "keywords": [
+    "GeckoJS",
+    "jQuery",
+    "ES6",
+    "Selectors",
+    "Convertions",
+    "Less",
+    "querySelectors"
+  ],
+  "author": "AlexSantos, BlobySoftware",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blobysoftware/GeckoJS/issues"
+  },
+  "homepage": "https://blobysoftware.github.io/GeckoJsPage/",
+  "publishConfig": {
+    "access": "public"
+  }
+}
