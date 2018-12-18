@@ -13,10 +13,90 @@
     font-family: "Poppins";
   }
   body{
+    background:#fff;
     scroll-behavior: smooth;
   }
   $primary:#2196F3;
   $max:1600px;
+  .side-nav{
+    overflow:scroll;
+    position: fixed;
+    font-size:20px;
+    top:0;
+    z-index:100;
+    background:#fff;
+    outline:2px solid #000;
+    width:280px;
+    height:100vh;
+    box-shadow:0 0 10px 10px rgba($color: #000000, $alpha: 0.2);
+    li{
+      font-size:1.3em;
+      padding:10px 20px;
+      color:#000;
+      i{
+        position: relative;
+        top:5px;
+      }
+      ul{
+        transform: scaleY(0);
+        opacity:0;
+        height:0;
+        font-size:0.7em;
+        li{
+          color:#555;
+          font-size:1.2em;
+        }
+        li:hover{
+          transition:all 0.3s ease;
+          color:#fff;
+          background:$primary;
+        }
+      }
+    }
+    li:hover{
+      cursor: pointer;
+    }
+    .tit{
+      font-size:1.8em;
+      color:$primary;
+      padding-bottom:0;
+      font-weight:bold;
+    }
+  }
+  #toTop{
+    background:$primary;
+    color:#fff;
+    margin:0;
+    padding:10px;
+    width:70px;
+    height:70px;
+    box-sizing:border-box;
+    position: fixed;
+    bottom:0;
+    right:0;
+    margin:17px;
+    border-radius:100%;
+    box-shadow:0 0 10px rgba($color: #000000, $alpha: .2);
+    z-index:98;
+    i{
+      position: relative;
+      top:50%;
+      left:34%;
+      transform:translate(-50%,-50%);
+      font-size:35px;
+    }
+  }
+  #shadow{
+    position: fixed;
+    display:none;
+    opacity:0;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba($color: #000000, $alpha: 0.3);
+    z-index:99;
+  }
   header {
     max-width:$max;
     position: relative;
@@ -162,6 +242,7 @@
       margin:0;
       margin:10px 0 00px 0;
   }
+
   .mainTit{
     text-align:center;
     font-weight:900;
@@ -170,6 +251,9 @@
     background:#555;
     border-bottom:6px solid #fff;
     outline:2px solid rgba(0,0,0,.1);
+  }
+  .conv{
+    font-size:35px;
   }
   .titles{
       text-align:center;
@@ -202,6 +286,7 @@
       border-bottom:5px solid $primary;
       font-weight:900;
       margin:0;
+      font-size:50px;
   }
   .ft{
     margin-top:50px;
@@ -249,7 +334,7 @@ code{
  }
     #download {
       margin: 0;
-      font-size: 1.3em;
+      font-size: 1.2em;
       padding: 0px !important;
       padding-bottom: 30px;
       line-height: 70px;
@@ -419,6 +504,9 @@ code{
     header #searchBtn i{
       font-size:70px;
     }
+    main .conv{
+      font-size:40px;
+    }
   }
   @media screen and (min-width: 345px) {
     #killD h1 {
@@ -433,6 +521,7 @@ code{
         text-align: justify;
       }
     }
+
   }
   
   @media screen and (min-width: 400px) {
@@ -443,6 +532,9 @@ code{
       p {
         font-size: 1.1em;
       }
+    }
+    main .conv{
+      font-size:45px;
     }
   }
   
@@ -462,6 +554,13 @@ code{
       width:283px;
       div:nth-child(2){
         width:148px;
+      }
+    }
+    .side-nav{
+      width:350px;
+      padding:30px 0px;
+      li{
+        padding:10px 40px;
       }
     }
     header #results{

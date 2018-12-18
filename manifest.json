@@ -3,7 +3,7 @@
     "name": "GeckoJS Documentation",
     "icons": [
       {
-        "src": "./img/icon.png",
+        "src": "./img/fav.png",
         "sizes": "1024x1024",
         "type": "image/png"
       }

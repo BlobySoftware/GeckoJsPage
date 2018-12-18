@@ -20,6 +20,96 @@ body {
   scroll-behavior: smooth;
 }
 
+.side-nav {
+  overflow: scroll;
+  position: fixed;
+  font-size: 20px;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  outline: 2px solid #000;
+  width: 280px;
+  height: 100vh;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.side-nav li {
+  font-size: 1.3em;
+  padding: 10px 20px;
+  color: #000;
+}
+
+.side-nav li i {
+  position: relative;
+  top: 5px;
+}
+
+.side-nav li ul {
+  transform: scaleY(0);
+  opacity: 0;
+  height: 0;
+  font-size: 0.7em;
+}
+
+.side-nav li ul li {
+  color: #555;
+  font-size: 1.2em;
+}
+
+.side-nav li ul li:hover {
+  transition: all 0.3s ease;
+  color: #fff;
+  background: #2196F3;
+}
+
+.side-nav li:hover {
+  cursor: pointer;
+}
+
+.side-nav .tit {
+  font-size: 1.8em;
+  color: #2196F3;
+  padding-bottom: 0;
+  font-weight: bold;
+}
+
+#toTop {
+  background: #2196F3;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 17px;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 98;
+}
+
+#toTop i {
+  position: relative;
+  top: 50%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+}
+
+#shadow {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
 header {
   max-width: 1600px;
   position: relative;
@@ -291,7 +381,7 @@ main .desc {
 
 main #download {
   margin: 0;
-  font-size: 1.3em;
+  font-size: 1.2em;
   padding: 0px !important;
   padding-bottom: 30px;
   line-height: 70px;
@@ -522,6 +612,13 @@ footer {
   }
   header #banner div:nth-child(2) {
     width: 148px;
+  }
+  .side-nav {
+    width: 350px;
+    padding: 30px 0px;
+  }
+  .side-nav li {
+    padding: 10px 40px;
   }
   header #results {
     top: 110px;
