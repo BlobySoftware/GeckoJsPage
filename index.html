@@ -204,7 +204,7 @@ g(".list", number).event("click", () =>{
 });</code></pre>
     <h2 class="subHeads">Limiters: <p>You can select an specific range of elements in a list from 0 to 'limiter'.</p></h2>
         <pre><code class="js">var limiter = 7;
-g(".list", limiter).event("click", () =>{
+g(".list", [limiter]).event("click", () =>{
 //Do something (from first element to 8th element)
                   
 });</code></pre>
@@ -359,12 +359,12 @@ str.lastIndexOf("char":String);</code></pre>
     <pre><code class="js">var str = "Best library";
 str.lastIndexOf("b"); //Returns 7</code></pre>
     <hr>
-    <h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,position,ge,char,chars,characters,charactert">Get Search Position</h1>
-    <h2 class="subHeads">Search Last:<p>Returns the position of the last character searched, the structure is:</p></h2>
+    <h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,position,get,char,chars,characters,character">Get Search Position</h1>
+    <h2 class="subHeads">Search Last:<p>Returns the position of a specifc substring in string position, the structure is:</p></h2>
     <pre><code class="js desc">var str = String;
-str.lastIndexOf("char":String);</code></pre>
-    <pre><code class="js">var str = "Best library";
-str.lastIndexOf("b"); //Returns 7</code></pre>
+str.getSearchPosition("char":String, Index:Number);</code></pre>
+    <pre><code class="js">var str = "Burst Your Bubble";
+str.getSearchPosition("b", 2); //Returns 13</code></pre>
     <hr>
     <h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,repeat,char,chars,characters,character">Search Repeat</h1>
     <h2 class="subHeads">If repeat:<p>Returns bolean of how much substrings or characters are in a string, the structure is:</p></h2>
@@ -557,7 +557,7 @@ n.pow(3); //Returns 64</code></pre>
         document.execCommand("copy");
     })
     g("#trump").event("click", () =>{
-        window.open("https://github.com/alexsan134/GeckoJS");
+        window.open("https://github.com/blobysoftware/GeckoJS");
     })
     hljs.initHighlightingOnLoad();
     g("#toTop").event("click", ()=>{
@@ -626,7 +626,7 @@ n.pow(3); //Returns 64</code></pre>
         var rs = g("#results");
         if(ofst.length > 0){
             fadeIn();
-            rs.html("");
+            rs.html(" ");
             for(var i = 0;i < els.length;i++){
                 var title = els[i].text();
                 var parraf = els[i].nextSibling.nextSibling.find("p");
@@ -705,9 +705,10 @@ n.pow(3); //Returns 64</code></pre>
     g("#shadow").event("click", () =>{
         slideOut();
     })
-
+    
     var liToggle = true;
     g(".side-nav > .subs").event("click", (e)=>{
+        console.log(e.target.class("contains", "sbs"));
         if(e.target.class("contains", "sbs") == false){
         var ul = e.target.find("ul");
         var ths = ul.childNodes;
@@ -742,6 +743,7 @@ n.pow(3); //Returns 64</code></pre>
         subs[i].attr("data-scroll", titles[i].offsetTop);
     }
    }
+
    g(".sbs").event("click", (e) =>{
     getOffsets();
         window.scrollTo({
