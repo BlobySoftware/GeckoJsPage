@@ -65,6 +65,7 @@
         </li>
         <li class="subs">Arrays<i class="material-icons">expand_more</i>
             <ul>
+                <li class="sbs">Include Str</li>
                 <li class="sbs">Operations</li>
                 <li class="sbs">Max</li>
                 <li class="sbs">Min</li>
@@ -72,7 +73,7 @@
                 <li class="sbs">Combine</li>
             </ul>
         </li>
-        <li class="subs">Numbers<i class="material-icons">expand_more</i>
+        <li class="subs fs">Numbers<i class="material-icons">expand_more</i>
             <ul>
                 <li class="sbs">Root</li>
                 <li class="sbs">Pow</li>
@@ -717,7 +718,6 @@ n.pow(3); //Returns 64</code></pre>
     
     var liToggle = true;
     g(".side-nav > .subs").event("click", (e)=>{
-        console.log(e.target.class("contains", "sbs"));
         if(e.target.class("contains", "sbs") == false){
         var ul = e.target.find("ul");
         var ths = ul.childNodes;
@@ -730,7 +730,7 @@ n.pow(3); //Returns 64</code></pre>
         var h = ths[1].css("get", "height").replace("px", "").toInt()*l;
         if(liToggle){
             i.text("expand_less");
-            ul.animates(`transform: scaleY(1);opacity:1;height:${h-15}px`, 300);
+            ul.animates(`transform: scaleY(1);opacity:1;height:${h-13}px`, 300);
             e.target.event("oclick", (e)=>{
                 ul.animates(`opacity:0;height:0`, 300);
                 i.text("expand_more");
@@ -748,7 +748,7 @@ n.pow(3); //Returns 64</code></pre>
     var titles = g(".heads");
     var subs = g(".sbs");
     var off = [];
-    for(var i=0;i<titles.length;i++){
+    for(let i=0;i<titles.length;i++){
         subs[i].attr("data-scroll", titles[i].offsetTop);
     }
    }
