@@ -29,7 +29,12 @@
         </li>
         <li class="subs">Tools<i class="material-icons">expand_more</i>
             <ul>
-                <li class="sbs">Random Range</li>
+                <li class="sbs">R.Range</li>
+                <li class="sbs">Exec</li>
+                <li class="sbs">Print</li>
+                <li class="sbs">PrintLn</li>
+                <li class="sbs">Warning</li>
+                <li class="sbs">Error</li>
             </ul>
         </li>
         <li class="subs">Objects<i class="material-icons">expand_more</i>
@@ -178,10 +183,35 @@ n.toObject(true); //Returns {0:"3", 1:"5", 2:"5", 3:"7"}</code></pre>
     <hr>
     <h1 class="mainTit">Tools</h1>
     <hr>
-    <h1 class="heads" data-keywords="">Random Range</h1>
+    <h1 class="heads" data-keywords="number,random,range,math,min,max,tool,function">Random Range</h1>
     <h2 class="subHeads">Get Random:<p>Get random numbers by a range, the structure is:</p></h2>
     <pre><code class="js desc">let n = randomRange(Min:Number, Max:Number);</code></pre>
     <pre><code class="js">let n = randomRange(3, 9); //Returns any number from 3 to 9</code></pre>
+    <hr>
+    <h1 class="heads" data-keywords="tool,function,command,exec,document,terminal,browser,window">Exec</h1>
+    <h2 class="subHeads">Run command:<p>Shorcut for document.execCommand, the structure is:</p></h2>
+    <pre><code class="js desc">exec("command":String, aShowDefaultUI:Boolean, aValueArgument:String);</code></pre>
+    <pre><code class="js">exec("copy");</code></pre>
+    <hr>
+    <h1 class="heads" data-keywords="tool,function,console,log,print,terminal,browser,window,dev,developer,message,msg">Print</h1>
+    <h2 class="subHeads">Console print:<p>Shorcut for console.log, the structure is:</p></h2>
+    <pre><code class="js desc">print("command":String);</code></pre>
+    <pre><code class="js">print("Hello", "Gecko"); //Print Hello Gecko</code></pre>
+    <hr>
+    <h1 class="heads" data-keywords="tool,function,console,log,print,ln,terminal,browser,window,dev,developer,message,msg">PrintLn</h1>
+    <h2 class="subHeads">Console printLn:<p>Shorcut for console.log with return to the end, the structure is:</p></h2>
+    <pre><code class="js desc">printLn("command":String);</code></pre>
+    <pre><code class="js">printLn("Love", "myself"); //Print Love\n myself\n</code></pre>
+    <hr>
+    <h1 class="heads" data-keywords="tool,function,console,log,war,warning,terminal,browser,window,dev,developer,message,msg">Warning</h1>
+    <h2 class="subHeads">Console Warn:<p>Shorcut for console.warn, the structure is:</p></h2>
+    <pre><code class="js desc">warn("command":String);</code></pre>
+    <pre><code class="js">warn("Shut up!"); //Print ⚠️ Shut up!</code></pre>
+    <hr>
+    <h1 class="heads" data-keywords="tool,function,console,log,erro,terminal,browser,window,dev,developer,message,msg">Error</h1>
+    <h2 class="subHeads">Console Warn:<p>Shorcut for console.error, the structure is:</p></h2>
+    <pre><code class="js desc">error("command":String);</code></pre>
+    <pre><code class="js">error("Breaked"); //Print ❗Breaked</code></pre>
     <hr>
         <h1 class="mainTit">Objects</h1>
         <h1 class="heads ft" data-keywords="object,objects,select,selectors,get,basic,structure,element,elements,selection,one,list,ranges,range,limiters,limiter,$,g,geckojs,install,npm,download,jquery,installation">Selectors</h1>
