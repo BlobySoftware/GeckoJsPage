@@ -29,7 +29,7 @@
         </li>
         <li class="subs">Tools<i class="material-icons">expand_more</i>
             <ul>
-                <li class="sbs">R.Range</li>
+                <li class="sbs">Random.R</li>
                 <li class="sbs">Exec</li>
                 <li class="sbs">Print</li>
                 <li class="sbs">PrintLn</li>
@@ -189,27 +189,27 @@ n.toObject(true); //Returns {0:"3", 1:"5", 2:"5", 3:"7"}</code></pre>
     <pre><code class="js">let n = randomRange(3, 9); //Returns any number from 3 to 9</code></pre>
     <hr>
     <h1 class="heads" data-keywords="tool,function,command,exec,document,terminal,browser,window">Exec</h1>
-    <h2 class="subHeads">Run command:<p>Shorcut for document.execCommand, the structure is:</p></h2>
+    <h2 class="subHeads">Run command:<p>Shortcut for document.execCommand, the structure is:</p></h2>
     <pre><code class="js desc">exec("command":String, aShowDefaultUI:Boolean, aValueArgument:String);</code></pre>
     <pre><code class="js">exec("copy");</code></pre>
     <hr>
     <h1 class="heads" data-keywords="tool,function,console,log,print,terminal,browser,window,dev,developer,message,msg">Print</h1>
-    <h2 class="subHeads">Console print:<p>Shorcut for console.log, the structure is:</p></h2>
+    <h2 class="subHeads">Console print:<p>Shortcut for console.log, the structure is:</p></h2>
     <pre><code class="js desc">print("command":String);</code></pre>
     <pre><code class="js">print("Hello", "Gecko"); //Print Hello Gecko</code></pre>
     <hr>
     <h1 class="heads" data-keywords="tool,function,console,log,print,ln,terminal,browser,window,dev,developer,message,msg">PrintLn</h1>
-    <h2 class="subHeads">Console printLn:<p>Shorcut for console.log with return to the end, the structure is:</p></h2>
+    <h2 class="subHeads">Console printLn:<p>Shortcut for console.log with return to the end, the structure is:</p></h2>
     <pre><code class="js desc">printLn("command":String);</code></pre>
     <pre><code class="js">printLn("Love", "myself"); //Print Love\n myself\n</code></pre>
     <hr>
     <h1 class="heads" data-keywords="tool,function,console,log,war,warning,terminal,browser,window,dev,developer,message,msg">Warning</h1>
-    <h2 class="subHeads">Console Warn:<p>Shorcut for console.warn, the structure is:</p></h2>
+    <h2 class="subHeads">Console Warn:<p>Shortcut for console.warn, the structure is:</p></h2>
     <pre><code class="js desc">warn("command":String);</code></pre>
     <pre><code class="js">warn("Shut up!"); //Print ⚠️ Shut up!</code></pre>
     <hr>
     <h1 class="heads" data-keywords="tool,function,console,log,erro,terminal,browser,window,dev,developer,message,msg">Error</h1>
-    <h2 class="subHeads">Console Warn:<p>Shorcut for console.error, the structure is:</p></h2>
+    <h2 class="subHeads">Console Warn:<p>Shortcut for console.error, the structure is:</p></h2>
     <pre><code class="js desc">error("command":String);</code></pre>
     <pre><code class="js">error("Breaked"); //Print ❗Breaked</code></pre>
     <hr>
@@ -247,7 +247,7 @@ g(".list", [max, min]).event("click", () =>{
 });</code></pre>
     <hr>
     <h1 class="heads" data-keywords="object,objects,find,search,get,element,elements,list,select,selectors,$,g,get">Find</h1>
-    <h2 class="subHeads">Everythig:<p>You can find an element by class, id, tagName, the structure is:</p></h2>
+    <h2 class="subHeads">Everything:<p>You can find an element by class, id, tagName, the structure is:</p></h2>
     <pre><code class="js desc">g("cssSelector").find("searchElement":String);</code></pre>
     <pre><code class="js">g("#elmnt").find("#main");</code></pre>
     <hr>
@@ -299,7 +299,7 @@ g("cssSelector").css("get":String, "cssRule":String);</code></pre>
     <pre><code class="js">g("#elmnt").offset(); \\Returns Object{top, left}</code></pre>
     <hr>
     <h1 class="heads" data-keywords="object,objects,css,style,css3,rules,properties,property,rule,get,computedstyle,styles,animation,animate,animations,transition,transitions,add">Animates</h1>
-    <h2 class="subHeads">Css animation:<p>Animates css of an element with css native not objects($), the dafualt time value is <span>150ms</span>, the basic structure is:</p></h2>
+    <h2 class="subHeads">Css animation:<p>Animates css of an element with css native not objects($), the defualt time value is <span>150ms</span>, the basic structure is:</p></h2>
     <pre><code class="js desc">g("cssSelector").animates("cssRules":String, Duration:Number, Delay:Number);</code></pre>
     <pre><code class="js">g("#elmnt").animates("color:red");</code></pre>
     <h2 class="subHeads">Time: <p>Defines the duration of the animation in an element.</p></h2>
@@ -391,14 +391,14 @@ str.lastIndexOf("char":String);</code></pre>
 str.lastIndexOf("b"); //Returns 7</code></pre>
     <hr>
     <h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,position,get,char,chars,characters,character">Get Search Position</h1>
-    <h2 class="subHeads">Search Last:<p>Returns the position of a specifc substring in string position, the structure is:</p></h2>
+    <h2 class="subHeads">Search Last:<p>Returns the position of a specific substring in string position, the structure is:</p></h2>
     <pre><code class="js desc">let str = String;
 str.getSearchPosition("char":String, Index:Number);</code></pre>
     <pre><code class="js">let str = "Burst Your Bubble";
 str.getSearchPosition("b", 2); //Returns 13</code></pre>
     <hr>
     <h1 class="heads" data-keywords="string,strings,substring,index,of,substr,at,search,repeat,char,chars,characters,character">Search Repeat</h1>
-    <h2 class="subHeads">If repeat:<p>Returns bolean of how much substrings or characters are in a string, the structure is:</p></h2>
+    <h2 class="subHeads">If repeat:<p>Returns boolean of how much substrings or characters are in a string, the structure is:</p></h2>
     <pre><code class="js desc">let str = String;
 str.searchRepeat(Repeat:Number, "char":String);</code></pre>
     <pre><code class="js">let str = "We are kids";
@@ -586,7 +586,7 @@ n.pow(3); //Returns 64</code></pre>
             <h1>Make libraries fasted again</h1>
         </section>
         <footer>
-            <strong>GeckoJS© all rights reserved <br> John Resig dont like this</strong>
+            <strong>GeckoJS© all rights reserved <br> John Resig doesn't like this</strong>
         </footer>
     </body>
     <script src="./materialize/js/materialize.min.js"></script>
